@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input placeholder="请输入手机号" type="text" />
+		<button>确定</button>
+	</body>
+	<script>
+		document.querySelector('button').onclick=function(){
+			var reg = /^1[345789][0-9]{9}$/
+//			var reg = /^1[345789]\d{9}$/
+			var value =document.querySelector('input').value
+			var result = reg.test(value)
+			console.log(result)
+			if(result){
+				alert('您输入的手机号为:'+value)
+			}else{
+				alert('请输入正确的手机号!')
+			}
+			
+		}
+		
+		
+		
+	</script>
+</html>
