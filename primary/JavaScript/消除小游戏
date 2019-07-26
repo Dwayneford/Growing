@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.game {
+			width: 600px;
+			font-size: 0;
+		}
+		.game img {
+		}
+	</style>
+	<body>
+		<div class="game">
+			
+		</div>
+	</body>
+</html>
+
+
+
+<script >
+window.onload = function(){
+	
+	//计算图片的宽度
+
+	var line = 5
+	var totoal = 25;
+	var one = 'img/Koala.jpg';
+	var two = 'img/Jellyfish.jpg';
+	//图片盒子
+	var box = document.querySelector(".game");
+	
+	var boxWidth = box.offsetWidth;
+	
+	//计算图片的宽度
+	var imgWidth = Math.floor(boxWidth/line)
+	//渲染html页面，game标签中插入img
+	for(var i=0; i<totoal; i++) {
+		//创建图片节点
+		var img = document.createElement('img');
+		//为图片设置内容和宽度
+		img.src = one;
+		img.style.width = imgWidth + 'px';
+		img.setAttribute("data-id", i)
+		
+		//往game中添加图片
+		
+		box.appendChild(img);
+	}
+	
+	//获取图片节点
+	var aImg = document.querySelectorAll('img');
+	
+	//给图片绑定点击事件
+	for(var i =0; i<aImg.length; i++) {
+//		aImg[i].onclick=function(){
+//
+//			var index = this.getAttribute('data-id');
+//			console.log(index)
+//		}
+		aImg[i].addEventListener('click', function(){
+			
+			//获取点击当前的data-id,就等于当前图片的下标
+			var index = this.getAttribute('data-id');
+			
+			setImgIndex(parseInt(index))
+			
+		})
+	}
+	
+	
+	function setImgIndex(index){
+		
+		var arr = [];
+		arr.push(index-line, index-1, index, index+1, index+line)
+		//index % line == 0左边一列图片
+		if(index % line == 0) {
+			arr.splice(1, 1)
+		//index % line == line-1 右边一列图片
+		}else if(index%line == line-1) {
+			arr.splice(3,1)
+		}
+		changeImage(arr)
+		
+	}
+	
+	function changeImage(arr) {
+		//改变图片之前先还原
+//		for(var i = 0;i<totoal;i++) {
+//			aImg[i].src = 'img/Koala.jpg'
+//		}
+		//改变图片
+		for(var i=0;i<arr.length;i++) {
+			//i 是arr的下标
+			// arr[i]是图片的下标
+			var currentIndex = arr[i]
+			console.log(currentIndex)
+			if(currentIndex>=0&& currentIndex<totoal) {
+				console.log(aImg[currentIndex].getAttribute('src'))
+				var img = aImg[currentIndex].getAttribute('src') == one ? two : one;
+				console.log(img, currentIndex)
+				aImg[currentIndex].src = img
+				
+			}
+
+		}
+		
+	}
+	
+}
+</script>
