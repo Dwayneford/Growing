@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number"/>
+		<button>确定</button>
+	</body>
+	<script>
+		var btn = document.querySelector('button')
+		btn.onclick=function(){
+			var Ip = document.querySelector("input");
+			var value=Ip.value;
+			switch(value){
+				case '1':
+				alert('选择的是JS');
+				break;
+				case '2':
+				alert('选择的是CSS');
+				break;
+				case '3':
+				alert('选择的是html');
+				break;
+				default:
+				alert('选择的是Java');
+				break;
+			}
+		}
+	</script>
+</html>
