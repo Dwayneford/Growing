@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.div1{
+			width: 200px;
+			height: 200px;
+			background: silver;
+		}
+		.div2{
+			width: 50px;
+			height: 50px;
+			background: goldenrod;
+		}
+	</style>
+	<body>
+		<div class="div1">
+			<div class="div2"></div>
+		</div>
+		<input type="text" name="" id=""  placeholder='请输入' class="input"/>
+		<button>确认</button>
+	</body>
+	<script type="text/javascript">
+		
+		document.querySelector('.div1').onclick=function(){
+			console.log('鼠标点击')
+		}
+		document.querySelector('.div1').onmousedown=function(){
+			console.log('鼠标按下')
+		}
+		document.querySelector('.div1').onmouseup=function(){
+			console.log('鼠标抬起')
+		}
+		document.querySelector('.div1').onmouseenter=function(){
+			console.log('移入')
+		}
+		document.querySelector('.div1').onmouseout=function(){
+			console.log('移出')			
+		}
+		document.querySelector('.div1').onmouseleave=function(){
+			console.log('鼠标移开')
+		}
+		document.querySelector('.div1').onmousemove=function(){
+			console.log('鼠标移动')
+		}
+		
+		
+		
+		document.getElementsByClassName('input')[0].onfocus=function(){
+			console.log('鼠标聚焦')
+		}
+		
+		document.getElementsByClassName('input')[0].onblur=function(){
+			console.log(this.value)
+			var value=this.value
+			if(!value){
+				console.log('名称为空!')
+			}
+			console.log('失去焦点')			
+		}
+		
+		document.getElementsByClassName('input')[0].onkeydown= function(event){
+			console.log('键盘按下')
+			console.log(event)
+			if(event.keyCode==13){
+				alert('提交')
+			}
+		}
+		
+		document.getElementsByClassName('input')[0].onkeyup=function(){
+			console.log('键盘抬起')
+		}
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
