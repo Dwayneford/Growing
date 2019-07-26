@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+	</body>
+	<script>
+		var now = new Date();
+		var year =now.getFullYear()
+		var month = now.getMonth()
+		var day =now.getDay()
+		var hour = now.getHours()
+		var minute = now.getMinutes()
+		var second = now.getSeconds()
+		var strtime =year+"年"+month+'月'+day+'日'+hour+'时'+minute+'分'+second+'秒'
+		console.log(strtime)
+		
+		setInterval(function(){
+					var now = new Date();
+		var year =now.getFullYear()
+		
+		//月份值初始值为0，因此要加1
+		var month = now.getMonth()+1
+		//date是日，day是星期几
+		var day =now.getDate()
+		var hour = now.getHours()
+		var minute = now.getMinutes()
+		var second = now.getSeconds()
+		var strtime =year+"年"+month+'月'+day+'日,	'+hour+'时'+minute+'分'+second+'秒。'
+		document.querySelector('div').innerHTML	=strtime
+		},1000)
+		
+	</script>
+</html>
