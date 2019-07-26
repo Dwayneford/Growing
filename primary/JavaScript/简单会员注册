@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		[id='会员注册']{
+			width: 400px;
+			height: 200;
+			font-size: 26px;
+			
+		}
+	</style>
+	
+	<body>
+		<div id="会员注册">会员注册</div>
+		<span class="inf">登录名：</span>
+		<input type="text" class="account" id="account" value="" />
+		<br />
+		
+		<span class="inf">密码：</span>
+		<input type="text" class="psw" id="firstpsw" value="" />
+		<br />
+		
+		<span class="inf">确认密码：</span>
+		<input type="text" class="psw" id="secondpsw" value="" />
+		<br />
+		
+		<span class="inf">性别</span>
+		<input type="radio" id="radio1" name="sex" value="male"/>男性
+		<input type="radio" id="radio2" name="sex" value="female"/>女性
+		<br />
+		
+		<span class="inf">年龄</span>
+		<select id="sel-age">
+			<option selected="selected" value="">--请选择--</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+		</select>
+		<br />
+		
+		<input type="button" name="" id="btn" value="提交" />
+		
+		
+	</body>
+	
+	<script>
+		document.getElementById('btn').onclick=function(){
+			var account =document.getElementById('account').value
+			var firstpsw =document.getElementById('firstpsw').value
+			var secondpsw =document.getElementById('secondpsw').value
+ 			
+ 			var raiogender= document.getElementsByName('sex')
+ 			var gender
+ 			if(raiogender[0].checked){
+ 				gender=raiogender[0].value
+ 			}else{
+ 				gender=raiogender[1].value
+ 			}
+ 			
+			var index = document.getElementById('sel-age').selectedIndex
+			var alloption = document.getElementById('sel-age').options			
+			var age = alloption[index].value
+
+			if(!account){
+				alert('请输入账户名！')
+				return
+			}
+			if(!firstpsw){
+				alert('请输入密码！')
+				return
+			}
+			if(firstpsw != secondpsw){
+				alert('两次密码输入不一致！')
+				return
+			}
+			if(!gender){
+				alert('请选择性别！')
+				return
+			}
+			if(!age){
+				alert('请选择年龄！')
+				return
+			}
+			
+			alert('登录名：'+account+'\n'+
+				'密码：'+firstpsw+'\n'+
+				'确认密码：'+secondpsw+'\n'+
+				'性别：'+gender+'\n'+
+				'年龄：'+age
+						
+			)
+			
+		}
+				
+	</script>
+	
+</html>
