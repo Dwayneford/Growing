@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<span>倒计时:</span>
+		<span class="t">0</span>
+		<span class="t">0</span>
+		<span class="t">0</span>
+		<span>天</span>
+		<span class="t">0</span>
+		<span class="t">0</span>
+		<span>时</span>
+		<span class="t">0</span>
+		<span class="t">0</span>
+		<span>分</span>
+		<span class="t">0</span>
+		<span class="t">0</span>	
+		<span>秒!</span>
+	</body>
+	<script>
+		var saletime = new Date('2019-12-31 23:59:59').getTime()
+
+
+		setInterval(function(){
+			var now = new Date().getTime()
+
+			var distance = saletime-now
+			var day = Math.floor(distance/(1000*60*60*24))
+			
+			
+			var hour = Math.floor((distance-day*1000*60*60*24)/(1000*60*60))
+
+			var minute = Math.floor((distance-day*1000*60*60*24-hour*1000*60*60)/(1000*60))
+
+			var second =Math.floor((distance-day*1000*60*60*24-hour*1000*60*60-minute*1000*60)/(1000))
+
+			day=String(day)
+			hour = String(hour)
+			minute= String(minute)
+			second=String(second)
+			
+			if(day.length<3){
+				day='0'+day
+			}
+			//将数字位数处理函数化
+			function changeNum(num){
+				if(num.length<2){
+				num='0'+num
+				}
+				return num
+			}
+			
+//			if(hour.length<2){
+//				hour='0'+hour
+//			}
+//			if(minute.length<2){
+//				minute='0'+minute
+//			}
+//			if(second.length<2){
+//				second='0'+second
+//			}
+
+
+			changeNum(hour)
+			changeNum(minute)
+			changeNum(second)
+			
+			var time=day+hour+minute+second
+			console.log(time)
+			time=time.split('')
+			
+
+
+
+			var etime=document.getElementsByClassName('t')
+
+
+			for(i=0;i<time.length;i++){
+				etime[i].innerHTML=time[i]
+			}						
+		},1000)
+		
+
+		
+		
+	</script>
+</html>
