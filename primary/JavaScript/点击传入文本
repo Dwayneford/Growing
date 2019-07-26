@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.mydiv{
+			width: 300px;
+			height: 300px;
+			background: silver;
+		}
+		[id='myinput']{
+			background: gainsboro;
+
+			
+		}
+	</style>
+	<body>
+		<div id="mydiv" class="mydiv">
+			
+		</div>
+		<span>李四:</span>
+		<input id="myinput" type="text"/>
+		<button id="mybut">确定</button>
+	</body>
+	
+	
+	<script type="text/javascript">
+		document.getElementById('mybut').onclick=function(){
+			var inputvalue = document.getElementById('myinput')
+			var value = inputvalue.value
+			document.getElementById('mydiv').innerHTML+='李四: '+value+'<br />';
+			inputvalue.value=' '
+		}
+		
+	</script>
+</html>
