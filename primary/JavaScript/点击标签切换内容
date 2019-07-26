@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			width: 300px;
+			height: 200px;
+			border: 1px solid blue;
+			display: none;
+		}
+	</style>
+	<body>
+		<button>按钮一</button>
+		<button>按钮二</button>
+		<button>按钮三</button>
+
+		<div>内容一</div>
+		<div>内容二</div>
+		<div>内容三</div>
+	</body>
+	<script>
+		var aBtn = document.getElementsByTagName('button')
+		var aDiv = document.getElementsByTagName('div')
+		
+		for(var i=0; i< aBtn.length;i++){
+			
+			aBtn[i].label=i
+			
+			aBtn[i].onclick = function(){
+				for(var j=0;j<aDiv.length;j++){
+					aDiv[j].style.display='none'
+				}
+				aDiv[this.label].style.display = 'block'
+			}
+		}
+	</script>
+</html>
