@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<style>
+		.icon {
+			background: url(img/icon.png) no-repeat;
+			width: 200px;
+			height: 200px;
+			display: inline-block;
+		}
+		
+		.chrome {
+			width: 175px;
+			height: 175px;
+		}
+		
+		.firefox {
+			width: 180px;
+			height: 182px;
+			background-position: -218px 0;
+		}
+		
+		.ie {
+			width: 160px;
+			height: 165px;
+			background-position: 0 -216px;
+		}
+		
+	</style>
+	
+	<body>
+		<!--
+			精灵图 也成为雪碧图
+			由多个图标组成的图片，用背景去取相应的图标
+		-->
+		<!--chrome 图标-->
+		<span class="icon chrome"></span>
+		<!--firefox图标-->
+		<span class="icon firefox"></span>
+		<!--IE图标-->
+		<span class="icon ie"></span>
+		
+	</body>
+</html>

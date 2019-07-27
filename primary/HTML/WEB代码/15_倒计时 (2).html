@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div>
+			<span class="time">1</span>
+			<span class="time">2</span>
+			<span>:</span>
+			<span class="time">1</span>
+			<span class="time">1</span>
+			<span>:</span>
+			<span class="time">1</span>
+			<span class="time">2</span>
+		</div>
+	</body>
+	
+	<script>
+		//如果不传参  获取当前时间  传参就是设置时间
+		
+		//getTime()  从传入的时间到1970-1-1 的毫秒数  被称为时间戳
+		
+		var cuxiao = new Date('2019-7-25 12:00:00').getTime();
+
+		
+		setInterval(function(){
+			var now = new Date().getTime()
+			//两个时间相隔的毫秒数   小时  分钟  秒
+			var distance = cuxiao-now;
+			
+			//parseInt  四舍五入
+			//Math.floor() 向下取整
+			
+			var hour = Math.floor(distance/(1000*60*60))
+			
+			// distance 是相隔的所有时间 -  小时走的毫秒数
+			var minute = Math.floor((distance - hour*60*60*1000)/(1000*60))
+			
+			var seconds = Math.floor((distance - hour*60*60*1000 - minute*60*1000)/1000)
+			
+			hour = changeNum(hour);
+//			hour = String(hour)
+//			if(hour.length <=1) {
+//				hour = '0' + hour
+//			}
+
+			minute = changeNum(minute);
+//			minute = String(minute)
+//			if(minute.length <=1) {
+//				minute = '0' + minute
+//			}
+			
+			seconds = changeNum(seconds);
+//			seconds = String(seconds)
+//			if(seconds.length <=1) {
+//				seconds = '0' + seconds
+//			}
+			
+			
+			
+			var time = hour + minute + seconds
+			console.log(time)
+			
+			//将时间字符串转成数组
+			time = time.split('')
+			
+			var eTime = document.querySelectorAll('.time');
+			
+			for(var i = 0;i<eTime.length;i++) {
+				eTime[i].innerHTML = time[i]
+			}
+			
+		}, 1000)
+		
+		
+		function changeNum(number) {
+			//函数体
+			number = String(number)
+			if(number.length <=1) {
+				number = '0' + number
+			}
+			
+			return number
+		}
+		
+		
+		
+	</script>
+	
+	
+</html>

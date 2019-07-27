@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="font/font.css" rel="stylesheet" />
+	</head>
+	<!--
+		position
+		relative:  相对定位，根据父级定位，不会脱离文档流
+		absolute:  绝对定位，根据  离自己最近的 已经定位的父级  定位， 脱离文档流
+		fixed:     固定定位，根据body，固定到窗口固定位置不动， 脱离文档流
+		static:    静态定位	
+		right left top  bottom
+		
+		right:  当前  标签右边线 跟 定位的父级右边线 的距离
+		left：     当前  标签左边线 跟 定位的父级左边线 的距离
+	-->
+	
+	<style>
+		body {
+			height: 1500px;
+		}
+		
+		.qrcode-box {
+			position: fixed;
+			bottom: 50px;
+			/*left: 0;*/
+			right: 0;
+			
+		}
+		.qrcode-box a {
+			display: inline-block;
+			width: 20px;
+			background: red;
+			color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+		}
+		
+		.qrcode {
+			position: absolute;
+			right: 40px;
+			bottom: -12px;
+			display: none;
+		}
+		
+		.qrcode-box:hover .qrcode {
+			display: block;
+		}
+		
+		.usercenter {
+			font-size: 100px;
+			color: blueviolet;
+		}
+		
+	</style>
+	
+	<body>
+		
+		<div class="qrcode-box">
+			<a>
+				显示二维码
+				<i class="iconfont usercenter"></i>
+			</a>
+			
+			<div class="qrcode">
+				<img src="img/qrcode.jpg" width="200" />
+			</div>
+		</div>
+		
+	</body>
+</html>

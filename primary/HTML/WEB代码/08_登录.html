@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--
+			属性： 在语言中以键值对的形式存在的叫做属性
+			所有标签都有一个属性 style,style中也包含自己的属性，width、height、border
+			属性名：属性值；
+		-->
+		
+		<div>
+			
+			<img src="http://www.yhmtou.com/data/files/mall/settings/site_logo.jpg" />
+			<!--
+				边框线
+				solid  实线
+				dashed  方块虚线
+				dotted  原点虚线  在老版本ie中是原点 现在浏览器都读不成原点
+				
+				
+				padding  内边距
+			-->
+			<div style="width: 992px; border: 1px solid #ccc; padding: 20px;">
+				
+				<!--
+					action  提交的地址/跳转的地址
+					method  提交的方式 
+					get    提交的数据会显示到地址上
+					post   提交的数据不会显示到地址上
+				-->
+				
+				<form action="index.html" method="get">
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							<font color="red">*</font>
+							用户名：
+						</label>
+						<input name="username" style="width: 270px; height: 38px;" type="text" />
+						<input name="number" value="123" type="hidden" />
+					</div>
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							<font color="red">*</font>
+							密&nbsp;&nbsp;&nbsp;码：
+						</label>
+						<input style="width: 270px; height: 38px;" type="password" />
+						
+					</div>
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							<font color="red">*</font>
+							确认密码：
+						</label>
+						<input style="width: 270px; height: 38px;" type="text" />
+						
+					</div>
+					
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							<font color="red">*</font>
+							电子邮箱：
+						</label>
+						<input style="width: 270px; height: 38px;" type="emial" />
+						
+					</div>
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							<font color="red">*</font>
+							手机：
+						</label>
+						<input style="width: 270px; height: 38px;" type="tel" />
+						
+					</div>
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							<font color="red">*</font>
+							验证码：
+						</label>
+						<input style="width: 140px; height: 38px;" type="text" />
+						<img style="vertical-align: top;" height="38" src="http://www.yhmtou.com/index.php?app=captcha&24277" />
+						
+					</div>
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							
+						</label>
+						<label>
+							<input type="checkbox" />
+							<span> 我已阅读并同意 <a style="text-decoration: none; color: red;" href="http://www.baidu.com">用户服务协议</a></span>
+						</label>
+						
+					</div>
+					<div style="margin-bottom: 20px;">
+						<!--
+							元素类型： 
+							块元素 :block
+							内联元素： 一排可以放多个标签，并且能够设置宽高 inline-block
+							行内元素： 一排可以放多个标签的，并且不能设置宽高，要设置宽高就必须改变类型 inline
+							
+							特殊字符& 特殊符名称  ;
+							a &lt; b &gt;c
+						-->
+						<label style="width: 162px; display: inline-block; text-align: right;">
+							
+						</label>
+						<input style="width: 245px; height: 33px; background: #564747; color: #fff; border: 0; border-radius: 6px;" type="submit" value="立即注册" />
+						
+					</div>
+				</form>
+			</div>
+			
+			
+			
+		</div>
+		
+		
+	</body>
+</html>

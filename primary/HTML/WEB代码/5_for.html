@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		body {
+			font-family: '黑体';
+		}
+	</style>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>
+<script>
+	
+	var str = ''
+	
+	//10行
+	for(var i = 1; i<= 10; i++){
+		
+		//空格的列数
+		for(var j = 0;j<10-i; j++) {
+			str+= '&nbsp;'
+		}
+		
+		
+		//*的列数
+		
+		for(var k = 0; k<2*i-1; k++) {
+			str += '*'
+		}
+		
+		str+= '<br />'	
+	}
+	
+	document.getElementById("div1").innerHTML = str
+	
+	
+	
+//	var str = ''
+//	//冒泡  控制行数
+//	for(var i= 0 ;i<6 ;i++) {
+//		
+//		for(var k =0; k<6-i-1; k++) {
+//			str+='&nbsp;'
+//		}
+//		//  控制列数
+//		for(var j = 0;j<i+1;j++) {
+////			document.write("#")
+//			str+='#'
+//		}
+//		str+='<br />'
+////		document.write('<br />')	
+//	}
+//	
+//	document.getElementById("div1").innerHTML = str
+	
+</script>

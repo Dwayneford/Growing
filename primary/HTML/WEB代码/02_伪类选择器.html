@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		/*元素有链接但没有操作的一个状态*/
+		a:link {
+			color: plum;
+		}
+		
+		/*鼠标移到元素上的执行的样式*/
+		a:hover {
+			color: red;
+		}
+		/*已经访问过的元素的变化*/
+		a:visited {
+			color: palegreen;
+		}
+		/*鼠标点击按住的状态*/
+		a:active {
+			color: #008000;	
+		}
+		
+	</style>
+	<body>
+		
+		<!--
+			伪类选择器
+			hover   active   link   visited  focus（聚焦 针对表单输入框） 
+		-->
+		
+		<a href="https://www.baidu.com" target="_blank" >跳转到百度</a>
+		<a href="http://www.taobao.com" target="_blank" >跳转到淘宝</a>
+		<a>跳转到淘宝</a>
+	</body>
+</html>

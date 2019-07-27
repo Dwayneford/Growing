@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.box {
+			width: 500px;
+			height: 300px;
+			border: 1px solid #ccc;
+
+			/*
+			 * 复合属性
+			 * 内边距:    上边距  右边距   下边距  左边距
+			 * padding: 10px 20px 30px 40px;
+			 * 分解
+			 * padding-top
+			 * padding-right
+			 * padding-bottom
+			 * padding-left
+			 */
+			
+			/*padding-top: 10px;
+			padding-right: 20px;
+			padding-bottom: 30px;
+			padding-left: 40px;*/
+			/*padding: 10px 20px 30px 40px;*/
+			/*      上边距     左右边距   下边距*/
+			/*padding: 10px 20px 30px;*/
+			
+			/*      上下边距   左右边距*/
+			/*padding: 20px 30px;*/
+			/*上下左右都为10px*/
+			/*padding: 10px;*/
+		}
+		
+		.content {
+			width: 400px;
+			height: 200px;
+			background: palevioletred;
+			/*上下左右为10px*/
+			/*margin: 10px*/
+			/*上下边距    左右边距   上下不能自动计算边距  左右可以计算边距*/
+			/*margin: auto auto;*/
+			
+			/*      上边距  左右边距  下边距*/
+			/*margin: 30px auto 50px;*/
+			
+			/*      上         右           下          左*/
+			margin: 10px 20px 30px 40px ;
+			
+			
+			/*
+			 * font-style(样式) 
+			 * font-weight(加粗)
+			 * font-size(大小)
+			 * font-family(字体)
+			*/
+			font: 40px "微软雅黑";
+			
+			/*
+			 * pc浏览器支持的最小字体为  12px
+			 * 默认的字体16px
+			 * 字体一般为双数 12px  14px  16px 18px 20px 22px 24px 30px 36px 
+			 */
+			/*font-size: 20px;*/
+			
+			/*font-style: oblique;*/
+			font-style: italic;
+			font-weight: 800;
+			
+		}
+	</style>
+	
+	<body>
+		
+		<div class="box">
+			<div class="content">好的开发规划的反馈结果</div>
+			
+			<input type="text" placeholder="请输入关键字" />
+			
+		</div>
+		
+		
+	</body>
+</html>

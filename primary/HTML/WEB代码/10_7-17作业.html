@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<style>
+		li {
+			list-style: none;
+		}
+		
+		.recommand-lists {
+			/*该元素类型的时候， 不要越级更改 inline   block   block  inline*/
+			display: inline-block;
+			width: 240px;
+			height: 40px;
+			text-align: center;
+		}
+		
+		.recommand-lists:hover {
+			border-bottom: 2px solid #FF2D52;
+		}
+		
+		.recommand-lists .title {
+			margin-top: 8px;
+		}
+		
+		.recommand-lists .trangle {
+			/*transparent  透明*/
+			border: 6px solid transparent;
+			
+			/*border-bottom-color: #000;*/
+			display: inline-block;
+			vertical-align: 8px;
+		}
+		
+		.recommand-lists:hover .trangle {
+			border-bottom-color: #FF2D52;
+		}
+		
+		.refresh {
+			display: inline-block;
+			height: 40px;
+			vertical-align: 32px;
+			margin-left: 100px;
+		}
+		
+		/*
+		 * line-height  针对文字和内联元素
+		 * text-aligin  针对文字和内联元素
+		 * vertical-aligin  针对标签  只能改变内联元素和行内元素，不能改块
+		 */
+		
+		.refresh-icon {
+			background: url(img/sign.png);
+			width: 22px;
+			height: 22px;
+			display: inline-block;
+			background-size: 100px 100px;
+			background-position: 0 -30px;
+			vertical-align: -13px;
+			margin-left: 5px;
+		}
+		
+		.refresh-title {
+			vertical-align: -9px;
+		}
+		
+		
+	</style>
+	
+	<body>
+		<ul class="recommand">
+			
+			<li class="recommand-lists">
+				<div class="title">推荐商品</div>
+				<span class="trangle"></span>
+			</li>
+			<li class="recommand-lists">
+				<div class="title">促销商品</div>
+				<span class="trangle"></span>
+			</li>
+			<li class="recommand-lists">
+				<div class="title">新品推荐</div>
+				<span class="trangle"></span>
+			</li>
+			<li class="refresh">
+				<span class="refresh-title">换一批</span>
+				<span class="refresh-icon"></span>
+			</li>
+			
+			
+		</ul>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div {
+			font-size: 12px;
+		}
+	</style>
+	<body>
+		<div id="div1">
+		</div>
+	</body>
+</html>
+<script>
+	var start = '';
+	for(var i =0;i<5;i++) {
+		start += '*'
+		var space = ''
+		for(var j =5; j>i+1; j-- ) {
+			space += '&nbsp;'
+			
+		}
+		document.getElementById('div1').innerHTML += space+start + '<br />'
+		
+	}
+	
+	
+//	for(var i = 0; i< 5; i++) {
+//		
+//		for(var j=i+1 ;j<5;j++) {
+//			document.write('&nbsp;')
+//		}
+//		
+//		for(var k=0; k<i+1; k++) {
+//			document.write('*')
+//		}
+//		document.write("<br />")
+//		
+//	}
+	
+</script>

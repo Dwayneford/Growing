@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		.main-nav {
+			width: 100%;
+			height: 40px;
+			background: #ff2d52;
+		}
+		.content {
+			width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+		}
+		
+		.classify, .nav-lists,  .nav-lists li{
+			display: inline-block;
+			color: #fff;
+			height: 100%;
+			vertical-align: top;
+		}
+		
+		.classify {
+			width: 200px;
+			height: 40px;
+			background: #ec193e;
+			text-align: center;
+			line-height: 40px;
+		}
+		
+		.nav-lists li {
+			text-align: center;
+			padding: 0 20px;
+			line-height: 40px;
+		}
+		.nav-lists li:hover {
+			background: #ec193e;
+		}
+		
+		/*分类图标*/
+		.icon-classify {
+			width: 20px;
+			height: 20px;
+			background: url(img/sign.png) no-repeat;
+			display: inline-block;
+			background-size: 125px 125px; 
+			vertical-align: -6px;
+			margin-right: 5px;
+		}
+		
+	</style>
+	<body>
+		<!--主导航-->
+		<nav class="main-nav">
+			<div class="content">
+				<!--分类-->
+				<div class="classify">
+					<span>*</span>
+					<span class="icon-classify"></span>
+					全部商品分类
+				</div>
+				
+				<!--导航列表-->
+				<ul class="nav-lists">
+					<li>首页</li>
+					<li>积分商城</li>
+				</ul>
+			</div>
+		</nav>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div {
+			width: 400px;
+			height: 200px;
+			border: 1px solid red;
+			display: none;  /*隐藏标签      当前标签不占位 */
+		}
+		/*first-child  针对子集    first 是针对同级   js没有first*/
+		/*.content div:first-child {
+			display: none;
+		}*/
+	</style>
+	
+	<body>
+		<!--tab切换-->
+		<button>按钮一</button>
+		<button>按钮二</button>
+		<button>按钮三</button>
+		<button>按钮四</button>
+		<!--<div class="content">-->
+			<div>内容一</div>
+			<div>内容二</div>
+			<div style="display: block;">内容三</div>
+			<div>内容四</div>
+		<!--</div>-->
+	</body>
+	
+	<script>
+		
+		
+		
+		//获取按钮
+		var aBtn = document.getElementsByTagName('button');
+		var aDiv = document.getElementsByTagName('div');
+		
+		for(var j = 0; j< aBtn.length; j++) {
+			
+			aBtn[j].label = j    
+			aBtn[0].label = 0
+			aBtn[1].label = 1
+			aBtn[2].label = 2
+			aBtn[3].label = 3
+			
+			console.log(aBtn[j],aBtn[j].label)
+			
+			
+			
+			aBtn[j].onclick = function() {
+				
+				
+				
+				for(var i = 0;i<aDiv.length; i++ ) {
+					
+					aDiv[i].style.display = 'none'
+					
+				}
+				
+				// this 就是 指向 当前点击的那个元素
+				// this 就是指向执行的环境
+				aDiv[this.label].style.display = 'block'
+				
+			}
+			
+		}
+		
+//		aBtn[0].onclick = function() {
+//
+//			for(var i = 0;i<aDiv.length; i++ ) {
+//				aDiv[i].style.display = 'none'
+//			}
+//			
+//			
+//			aDiv[0].style.display = 'block'
+//			
+//		}
+
+		
+		
+	</script>
+	
+	
+	
+</html>

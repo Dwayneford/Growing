@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<link href="css/div.css" rel="stylesheet" />-->
+	</head>
+
+	
+	<style>
+		body {
+			height: 500px;
+		}
+		#div {
+			background: yellow;
+		}
+		
+		.div {
+			background: paleturquoise;
+		}
+		
+		div {
+			width: 100px;
+			height: 100px;
+			background: red ;
+			position: relative;
+			/*bottom: 100px*/
+		}
+		
+		.div2 {
+			position: absolute;
+			z-index: 1;
+			
+		}
+		
+		.div3 {
+			width: 300px;
+			height: 400px;
+			background: plum;
+
+		}
+		
+	</style>
+	<body>
+	<!--<link href="css/div1.css" rel="stylesheet" />-->
+		
+		<!--
+			css选择器  --   8种
+			css属性
+			css使用方式 --  3种
+			行内样式  > 内联样式    外部样式
+			内联样式    外部样式 从上到下覆盖关系，下面的样式会覆盖上面的样式
+			
+			css选择器    id  class  element   行内样式
+			 行内样式 > id选择器  > 类选择器 >  标签选择器   
+			 
+			属性：
+			width   height  border   padding  margin background  color font-size 
+			font  font-family  font-style  font-color  font-weight  position 
+			float  display   right left bottom top  line-height  text-aligin
+			vertical-aligin  z-index  border-radius  word-spacing  letter-spacing
+			overflow  cursor   box-sizing  text-decoration  outline list-style
+			clear
+			position中relative属性只能设置left 和top， right bottom有问题，其他fixed absolute 
+			四个属性都生效
+			fixed absolute  都会脱离文档流
+			脱离文档流   在当前位置显示 但是不占位  不占父级元素的宽度 高度 
+			display   span i em  u  b  这一系列标签设置宽高一定要改为内联盒子
+			
+		-->
+		
+		<table border="1">
+			<tr>
+				<th>学生</th>
+				<!--合并列-->
+				<th colspan="3">课程</th>
+			</tr>
+			<tr>
+				<td>赵浦</td>
+				<td>html</td>
+				<td>css</td>
+				<td>js</td>
+			</tr>
+			<tr>
+				<td>蔡姐林</td>
+				<td>java</td>
+				<td>javaee</td>
+				<td>spring mvc</td>
+			</tr>
+		</table>
+		
+		<table border="1">
+			<tr>
+				<th>学生</th>
+				<td>赵浦</td>
+				<td>蔡姐林</td>
+				<td>罗森木</td>
+			</tr>
+			<tr>
+				<!--合并行-->
+				<th rowspan="3">课程</th>
+				<td>html</td>
+				<td>css</td>
+				<td>js</td>
+			</tr>
+			<tr>
+
+				<td>java</td>
+				<td>javaee</td>
+				<td>spring mvc</td>
+			</tr>
+			<tr>
+
+				<td>小程序</td>
+				<td>app</td>
+				<td>大数据</td>
+			</tr>
+			
+		</table>
+		
+		
+		<div id="div" class="div" style="background: mediumpurple;" ></div>
+		<div id="div" class="div"  ></div>
+		<div class="div"  ></div>
+		<div  ></div>
+		<span>123</span>
+		<span>123</span>
+		<span>123</span>
+		<span>123</span>
+		<div class="div2"></div>
+		<div class="div3"></div>
+		
+	</body>
+</html>
+
+

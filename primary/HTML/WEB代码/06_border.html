@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.box {
+			width: 100%;
+			height: 300px;
+			background: #98FB98;
+			padding-top: 50px;
+			
+		}
+		
+		.box:hover {
+			background: green;
+		}
+		
+		.content {
+			width: 50%;
+			height: 200px;
+			background: #00FFFF;
+			
+			/*
+			 * min-width 最小宽度
+			*/
+			min-width: 300px;
+			
+			/*最大宽度*/
+			max-width: 500px;
+			
+			/*
+			 * 复合属性：  由多个值简化组成，可以分化成多个
+			 * 边框
+			*/
+			border-right: 20px solid #ccc;
+			border-left: 20px solid #bbb;
+			border-top: 20px solid #aaa;
+			border-bottom: 20px solid #abc;
+			/*border: 10px solid red;*/
+			
+			/*border-top-color: red;
+			border-left-color: black;
+			border-bottom-color: red;
+			border-right-color: red;
+			
+			border-top-style: solid;
+			border-left-style: solid;
+			border-bottom-style: dashed;
+			border-right-style: solid;
+			
+			border-top-width: 100px;
+			border-bottom-width: 10px;
+			border-left-width: 10px;
+			border-right-width: 10px;*/				
+		}
+		
+		
+		.span-border {
+			border: 30px solid #98FB98;
+			border-right-color: black;
+			display: inline-block;
+			/*margin-top: 50px;*/
+			
+		}
+
+		
+		.box:hover .span-border {
+			border-color: green;
+			border-right-color: black;
+		}
+		
+	</style>
+	
+	
+	<body>
+		
+		<div class="box">
+			
+			<!--<div class="content">
+				
+			</div>-->
+			<span class="span-border"></span>
+		</div>
+		
+	</body>
+</html>

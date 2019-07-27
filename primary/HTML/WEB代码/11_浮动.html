@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		
+		.box {
+			font-size: 0;
+		}
+		
+		.box li {
+			width: 80px;
+			border: 1px solid #ccc;
+			list-style: none;
+			display: inline-block;
+			font-size: 14px
+		}
+		.lists {
+			margin: 0;
+			padding: 0;
+		}
+		.lists li {
+			list-style: none;
+			width: 80px;
+			border: 1px solid #ccc;
+			
+			/*
+			 * css  层叠样式表
+			 * float  浮动  将标签浮出一层
+			 */	
+			float: right;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.div {
+			/*相对定位*/
+			position: relative;
+			width: 200px;
+			height: 30px;
+			background: #008000;
+			/*z-index  改变元素层级*/
+			z-index: 0;
+			
+		}
+		
+	</style>
+	
+	<body>
+		
+		<ul class="box">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		
+		
+		<ul class="lists">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<div class="div"></div>
+		
+	</body>
+</html>

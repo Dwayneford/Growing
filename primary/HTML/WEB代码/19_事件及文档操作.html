@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		.child {
+			width: 50px;
+			height: 50px;
+			background: green;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="child"></div>
+		</div>
+		<input class="input" placeholder="请输入名称" type="text" />
+		<button class="button">按钮</button>
+	</body>
+	
+	<script>
+		
+		
+		
+		//数组
+		// document.getElementsByClassName
+		//document.getElementsByName
+		//document.getELementsByTagName
+		//document.querySelectorAll (符号)
+		
+		//对象
+		//document.getElementById
+		//document.querySelector(符号)
+		
+		// 事件  鼠标事件 键盘事件  表单事件  
+		//鼠标事件  click点击   dbclick 
+		//mouseenter  鼠标移入
+		//mouseleave  移到子元素上不叫移出
+		//mouseout    移到子元素上叫移出
+		//mouseover   鼠标经过 移到自己以及子元素都叫经过
+		//mousemove   鼠标移动
+		//mouseup    鼠标抬起来的时候 释放鼠标
+		//mousedown  鼠标按起来的时候
+		
+		
+		//键盘事件
+		//onkeydown   键盘按下动作
+		//onkeyup     键盘释放动作
+		//event       事件对象
+		//code        键盘代表的字符
+		//keyCode     键盘代表字符的ASC码
+//		document.getElementsByClassName("input")[0].onkeydown = function(event) {
+//			//event   事件对象
+//			console.log(event)
+//			console.log('键盘按下')
+//			if(event.keyCode == 13) {
+//				alert('提交')
+//			}
+//		}
+		
+//		document.getElementsByClassName('input')[0].onkeyup = function() {
+//			
+//			console.log('键盘抬起')
+//			
+//		}
+		
+		//表单事件
+		//获取焦点    focus
+		
+		//失去焦点  blur
+		document.getElementsByClassName('input')[0].onblur = function() {
+//			console.log(this.value)
+			var value = this.value
+			if(!value) {
+				console.log("名称不能为空")
+			}
+			
+			console.log('失去焦点')
+		}
+		
+		document.getElementsByClassName('input')[0].onfocus = function() {
+			
+			console.log('聚焦')
+			
+		}
+		
+		
+//		document.getElementsByClassName('button')[0].ondblclick = function() {
+//			
+//			console.log('双击')
+//			
+//		}
+//		document.querySelector(".box").onclick = function() {
+//			console.log('点击')
+//		}
+//		
+//		document.querySelector(".box").onmousedown = function() {
+//			console.log('按下')
+//		}
+//		
+//		document.querySelector(".box").onmouseup = function() {
+//			console.log('抬起')
+//		}
+		
+//		document.querySelector('.box').onmouseenter = function() {
+//			console.log('移入')
+//		}
+		
+//		document.querySelector('.box').onmouseleave = function() {
+//			console.log('移出')
+//		}
+//		document.querySelector('.box').onmouseout = function() {
+//			console.log('移出out')
+//		}
+//		document.querySelector('.box').onmouseover = function() {
+//			console.log('经过')
+//		}
+//		
+//		document.querySelector('.box').onmousemove = function() {
+//			console.log('移动')
+//		}
+		
+	</script>
+</html>

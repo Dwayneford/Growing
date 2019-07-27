@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select>
+			<option value="1">html</option>
+			<option value="2">css</option>
+			<option value="3">js</option>
+			<option value="4">小程序</option>
+		</select>
+		<button class="btn">确定</button>
+	</body>
+	
+	
+	<script>
+		//getElementsByClassName('btn')
+		var btn = document.querySelector('.btn')
+		
+		btn.onclick = function() {
+			
+			var sel = document.querySelector('select');
+			//获取非表单标签的内容用innerHTML  innerText来获取
+			
+			//获取表单标签 如input select 用value来获取
+			var value = sel.value
+			
+			if(value ==1 ) {
+				alert('你选择的课程为HTML')
+				
+				//else if(条件)
+			}else if(value == 2){
+				alert('你选择的课程为css')
+			}else if(value == 3){
+				alert('你选择的课程为js')
+			}else {
+				alert('你选择的课程为小程序')
+			}
+			
+			
+		}
+		
+		
+	</script>
+	
+</html>

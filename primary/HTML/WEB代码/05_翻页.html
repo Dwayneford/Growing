@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		li {
+			list-style: none;
+		}
+		
+
+		.page-box .page {
+			/*让翻页排成一排  将块级元素改为内联元素*/
+			display: inline-block;
+		}
+		
+		.page-box .button {
+			/*宽度*/
+			width: 37px;
+			
+			/*字体*/
+			font-size: 12px;
+			
+
+			text-align: center;
+			
+			/*背景色*/
+			background: #f6f6f6;
+			
+			/*高度*/
+			height: 38px;
+			
+			/*行高   上下居中*/
+			line-height: 38px;
+			
+			/*边框*/
+			border: 1px solid #ccc;
+			
+			/*圆角边框*/
+			border-radius: 5px;
+				
+			/*将行内元素改为内联元素*/
+			display: inline-block;
+		}
+		
+		.page-box .page:last-child .button, 
+		.page-box .page:first-child .button {
+			width: 66px;
+		}
+		/*鼠标移上去的状态*/
+		.page-box .button:hover {
+			background: #717171;
+			color: #fff;
+			border-color: #717171;
+		}
+		
+		/*当前页的状态*/
+		.page-box .button.current {
+			background: #717171;
+			color: #fff;
+			border-color: #717171;
+		}
+		
+		/*按钮禁止状态*/
+		.page-box .button.disabled {
+			background: #fff;
+			color: #ccc;
+			border-color: #ccc;
+			/*禁止手势*/
+			cursor: not-allowed;
+		}
+	</style>
+	<body>
+		
+		
+		<ul class="page-box">
+			<li class="page">
+				<a class="button disabled">上一页</a>
+			</li>
+			<li class="page">
+				<a class="button current">1</a>
+			</li>
+			<li class="page">
+				<a class="button">2</a>
+			</li>
+			<li class="page">
+				<a class="button">下一页</a>
+			</li>
+		</ul>
+		
+		
+		
+	</body>
+</html>

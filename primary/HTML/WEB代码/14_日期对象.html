@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日期对象</title>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+	</body>
+	
+	<script>
+		
+		//获取当前的日期
+		
+			var now = new Date()	
+			
+			// 获取年 月 日  时 分 秒
+			// var year = now.getYear()
+	
+			var fullYear = now.getFullYear()
+			
+			// 月份从0开始 ，计算月要在现有基础上+1
+			var month = now.getMonth() +1
+	
+			
+			var day = now.getDate()
+	
+			var hour = now.getHours()
+	
+			var minute = now.getMinutes()
+	
+	
+			var second = now.getSeconds()
+			
+			
+			var  dayTime = fullYear + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
+			
+			document.querySelector('div').innerHTML = dayTime
+		
+		
+		//定时器   setInterval(function(){每个多少时间执行的内容}, 间隔的时间)
+		//如果不停止  就是一直执行
+		setInterval(function(){
+			//获取当前的日期
+		
+			var now = new Date()	
+			
+			// 获取年 月 日  时 分 秒
+			// var year = now.getYear()
+	
+			var fullYear = now.getFullYear()
+			
+			// 月份从0开始 ，计算月要在现有基础上+1
+			var month = now.getMonth() +1
+	
+			
+			var day = now.getDate()
+	
+			var hour = now.getHours()
+	
+			var minute = now.getMinutes()
+	
+	
+			var second = now.getSeconds()
+			
+			
+			var  dayTime = fullYear + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
+			
+			document.querySelector('div').innerHTML = dayTime
+			
+		}, 1000)
+		
+	</script>
+	
+	
+</html>

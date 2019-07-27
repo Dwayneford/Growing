@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>商品名称：<span class="name"></span></div>
+	</body>
+	<script>
+		var loaction = window.location
+		
+		
+		var search = loaction.search.split('=')[1]
+		var name = ''
+		switch(search) {
+			case '11':
+				name = '商品一'
+				break;
+			case '22':
+				name = '商品二'
+				break;
+			case '32':
+				name = '商品三'
+				break;	
+				
+		}
+		console.log(name)
+		document.querySelector(".name").innerHTML = name
+		
+	</script>
+</html>

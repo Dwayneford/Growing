@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<style>
+		/** {
+			padding: 0;
+			margin: 0;
+		}*/
+		.box {
+			width: 200px;
+			height: 200px;
+			border: 10px solid #008000;
+			padding: 10px;
+			margin: 10px;
+		}
+		
+		.box1 {
+			padding: 15px;
+			margin: 20px;
+		}
+		.content {
+			background: red;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	
+	
+	<body>
+		<!--
+			在html中， 每一个标签称为一个盒子
+			margin  页边空白  在边框外面
+			border  边框
+			padding 内容到边框的距离
+			content 内容区域
+			
+			盒子类型： 3种 
+			块元素：占一行
+			div, p, h1-h6, ul, li, ol, table, tr, hr, dl, dt, dd, form, option, iframe
+			footer, header, nav
+			
+			内联元素： 不占一行，内容撑大，可以设置宽高,并且宽高会生效
+			td, img, input, textarea, select
+			
+			行内元素（元素，标签，节点，盒子）：
+			span, em, i, strong, b, a, sup, u, sub
+			
+			盒子模型可以相互转换，用css转换， 
+			display: 
+			block 转换成块
+			inline  转换成行内元素
+			inline-block   转换成内联元素
+			
+		-->
+		<form>11</form>
+		<form>11</form>
+		<select style="width: 200px;">
+			<option>1</option>
+			<option>2</option>
+		</select>
+		<select>
+			<option>1</option>
+			<option>2</option>
+		</select>
+		<span style="background: paleturquoise; width: 300px;">这是一个span</span>
+		<div class="box box1">
+			<div class="content"></div>
+		</div>
+		<table border="1">
+			<tr>
+				<td>1<sup>12</sup></td>
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+		</table>
+		<hr />
+		<table border="1">
+			<tr>
+				<td>2</td>
+			</tr>
+		</table>
+		<hr />
+		<dl>
+			<dd>123</dd>
+			<dd>123</dd>
+		</dl>
+		<dl>123</dl>
+	</body>
+</html>
