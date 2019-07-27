@@ -8,7 +8,8 @@
 		.game-box{
 			width: 600px;
 			font-size: 0;
-			
+			/*min-height: 600px;*/
+			/*border: 1px solid saddlebrown;*/
 		}
 	</style>
 	<body>
@@ -18,7 +19,7 @@
 			<button>show game</button>	
 		</div>
 		<div class="game-box">
-			
+			<!--<img src="img/Jellyfish.jpg" />-->
 		</div>
 	</body>
 </html>
@@ -32,28 +33,42 @@
 	
 	btn.onclick=function(){
 		
+		//从输入框获取图片盒子的行列数，来确定图片的高度
+		// .style 属于查找行内样式  就等于写到标签上
 		var box = document.querySelector('.game-box')
+		//每次点击先清空
 		box.innerHTML=''
+		//若没有输入值，则默认为5(||5)
 		cols= document.querySelector('[name=col]').value || 5
 		rows= document.querySelector('[name=row]').value || 5
-		
+		//将字符串转化为数字
 		cols= parseInt(cols)
 		rows= parseInt(rows)
 		
+		//offset 获取元素具体位置及大小
+		//offsetWidth获取元素宽度
+		//offsetHeight获取元素高度
+		//offsetLeft获取元素距离父级的左边距 ，父级的margin
+		//offsetTop获取元素距离父级的顶部距离，包含父级的margin
+		
+		
 		
 		var boxwidth= box.offsetWidth
+		//获取图片的宽度=盒子的距离/列数
 		var imgwidth= boxwidth/(cols)
 		imgTotal= cols*rows
 		console.log(imgTotal)
-		
+		//往图片盒子中添加图片，总个数为imgTotal
 		for(var i=0;i<imgTotal;i++){
 			
 			var img= document.createElement('img')
 			
+			//添加属性 setAttribute（属性名，属性值）
 			img.setAttribute('src',imgSrc1)
-			img.setAttribute('scr',i)
+			img.setAttribute('index',i)
 			img.width=imgwidth
 			
+			//将元素追加到盒子中，appendchild（添加的元素）
 			box.appendChild(img)
 		}
 		imgListClick()		
@@ -65,14 +80,16 @@
 		
 		for(var i=0; i<imgTotal;i++){
 			
-			imglist[i].onClick=function(){
-				
+			imglist[i].onclick=function(){
+				//获取图片的次序，获取标签属性值.getAttribute(属性名)
 				var index= parseInt(this.getAttribute('index'))
 				console.log(index)
-				
+				//获取图片数组
 				var arr= [index-cols,index-1,index,index+1,index+cols]
 				
+				//去掉不正常的数据
 				arr=setArrData(index,arr)
+				//换图片
 				changeImage(arr)
 				console.log(arr)
 			}
@@ -96,6 +113,7 @@
 		var imglist= document.querySelectorAll('.game-box img')
 		
 		for (var i =0 ; i<arr.length;i++){
+			//要换图片的下标
 			var index = arr[i]
 			
 			if(index >=0 && index <imgTotal){
