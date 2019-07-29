@@ -1,0 +1,54 @@
+package java_day_01;
+
+public class OperationMath {
+
+	public static void main(String[] args) {
+		//运算符的使用
+		int count=10 ;
+		//递增递减的使用
+		System.out.println(count++);
+		System.out.println(++count);
+		//输出12
+		System.out.println(count--);
+		System.out.println(--count);
+		//输出10
+		System.out.println(count%3); //求余
+		
+		//三目运算
+		String  strNum = count%2 >0 ? "奇数":"偶数";
+		//条件表达式 ？ 成立：不成立
+		//条件表达式 ？ （条件表达式 ？ （条件表达式 ？ 成立：不成立）：不成立）：不成立
+		System.out.println(count+"是"+strNum);
+		
+		//逻辑运算符
+		int num1 = 2 ;
+		int num2= 4;
+		System.out.println(num1>1 && num2<-2); //两个为真才为真
+		System.out.println(num1<1 || num2< -2);//一个为真就是真
+		System.out.println(!(num1<1 || num2< -2));
+		//位运算符
+		//位运算符改变值速度最快
+		int a= 9 ;
+		int b=5 ;
+		//0000 0101 ==> 0000 0001 右移
+		System.out.println(b>>2);
+		//0000 0101 ==> 0010 1000 左移
+		System.out.println(b<<3);
+		
+		
+		/*
+		 * 按位取反~	
+		 * 步骤
+		 * 二进制：	
+		 * 	0 1001
+		 *	计算补码：0 1001
+		 *	按位取反：1 0110
+		 *	转为原码：1 1001
+		 *	末位加一：1 1010
+		 *	符号为一的负数
+		 */
+		System.out.println(~5);
+		
+	}
+	
+}
