@@ -1,0 +1,32 @@
+package java_day_01;
+
+import java.util.Scanner;
+
+public class HomeWork7_29_02 {
+
+	public static void main(String[] args) {
+		signin();
+		
+	}
+		
+	public static void signin(){
+		String accountName="123";
+		String accountpwd="pwd12345";
+		for(int i = 2; i>=0;i--){
+			Scanner sca = new Scanner(System.in);
+			
+			System.out.println("请输入用户名：");
+			String name=sca.next();
+			System.out.println("请输入密码：");
+			String pwd= sca.next();
+			
+			if (name.equals(accountName) && pwd.equals(accountpwd)) {
+				System.out.println("恭喜您登录成功！");
+			}else if(i>0){
+				System.out.printf("你还有%d次机会",i);
+			}else{
+				System.out.println("登录失败，请联系管理员！");
+			}			
+		}		
+	}		
+}
