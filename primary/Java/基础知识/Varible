@@ -1,0 +1,56 @@
+package java_day_01;
+/**
+ * 八种数据类型
+ * 四种数字类型：byte short int long
+ * 两种浮点类型:float long
+ * 一种字符类型char
+ * 布尔类型：Boolean
+ * 枚举类型
+ * @author Administrator
+ *
+ *变量，电脑内存中分配的一块地址
+ *数据类型：基本类型和引用类型
+ *定义变量语法：数据类型 变量名称=变量值
+ *规范：变量必须以字母下划线，_，$,开头，其他部分不能除了$以外的特殊字符
+ *		定义必须有意义
+ *		驼峰或者下划线
+ *		不能使用中英文混合	
+ *java中的运算符：
+ *	四则运算+-/*  
+ *	求余%
+ *	自增或者递减++，--
+ *	在自身基础上计算后再赋值给本身：+=，-=
+ *	逻辑运算，
+ *	&& || ！与或非
+ *位运算：&~|<<  >>
+ *进制转换
+ *	7转换二进制
+ *
+ */
+public class Variable {
+
+	public static void main(String[] args) {
+		//定义变量 栈内存
+		int age =106;
+		float $$_ = 10.4f;
+		double price = 153.58d; 
+		byte _tb= 127; //-128~127
+		char ch = 'b'; //单引号
+		
+		System.out.println(age-5);
+		System.out.println(ch);
+		System.out.println(ch+20);
+		//数据类型转换：低类型转高类型 自动转换，高转低 强制转换，精度丢失
+		
+		float sunNum = age +$$_;
+		int sunInt =(int)(age+$$_);
+		System.out.println("float:"+sunNum);
+		System.out.println("Int:"+sunInt);
+		
+		
+		
+	}
+}
+
+
+
