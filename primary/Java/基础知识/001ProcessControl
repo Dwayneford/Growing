@@ -1,40 +1,131 @@
 package java_day_01;
 
-public class ProcessControl {
+import java.util.Scanner;
 
-/**
- * java中的流程控制Process control
- * 1.if(条件){
- * 		}else if{
- * 		}else{
- *		}
- *
- * 2.switch(key){
- * 		case value:
- * 			break;
- * 		case value:
- * 			break;
- * 		default:
- * 			break;
- * 	}
- * 
- * 3.while(条件){
- * 	}
- * 
- * 4.do {}while(条件)
- * 
- * 5.for(初始值；比较条件；增量改变)
- * 
- * 6.for(被遍历的数据类型 遍历对象：数组/集合){
- * 		遍历对象···
- * 	}
- * 
- * 7. break;结束整个循环操作
- *    continue;结束当前循环操作，进入下一次循环
- * 	
- */
+public class ProcessControl {
+	public static void main(String[] args) {
+
+		ProcessControl pc = new ProcessControl();
+//		queryMaxMinNum();
+//		sum();
+//		String str= queryMaxMinNum();
+//		System.out.println(str);
+//		sunNumFun();
+		pc.cacheGoods();
+	}
+	
+	public static void cacheGoods(){
+		//简单抽奖
+		int mathNum = (int)Math.round(Math.random()*10);
+		switch (mathNum) {
+		case 1:
+			System.out.println("芒果一斤");
+			break;
+		case 2:
+			System.out.println("鸡腿一斤");
+			break;
+		case 3:
+			System.out.println("再抽两次");
+			break;			
+		case 4:
+			System.out.println("现金抵用券一张");
+			break;			
+		default:
+			System.out.println("谢谢参与");
+			break;
+		}
+		
+		
+	}
+	
+	
+	public static String queryMaxMinNum(){
+		//输入5个整数，遍历求出最大最小值
+		
+		//定义输入对象
+		Scanner sc = new Scanner(System.in);
+		//定义能存放5位数的数组
+		int[] arry =new int[5];
+		for(int i=0; i<arry.length;i++){
+			System.out.printf("请输入第%d个参数",(i+1));
+			arry[i]=sc.nextInt();
+		}
+		System.out.println("数组存放完成，长度为："+arry.length);
+		//遍历比较大小
+		int maxNum = arry[0];
+		int minNum= arry[0];
+		for(int h=0;h<arry.length;h++){
+			maxNum = maxNum < arry[h] ? arry[h]:maxNum;
+			minNum= minNum > arry[h] ? arry[h]:minNum;
+		}
+		
+		System.out.println("最大值为："+maxNum+ ";最小值为："+minNum);
+		
+		return "最大值为："+maxNum+ ";最小值为："+minNum;
+		
+	}
+	
+	public static void sunNumFun(){
+		//求100以内奇数和与偶数和
+		int countNum=0;
+		int countNum2=0;
+		int i =1;
+		while(i<=100){
+			if(i%2==1){
+				countNum +=i;
+			}
+			
+			if(i%2==0){
+				countNum2 +=i;
+			}
+			
+			i++;
+			
+			
+		}
+				
+		System.out.println("奇数和为："+countNum2+"偶数和为："+countNum);		
+		
+		
+	}
+	
+
+	/**
+	 * java中的流程控制Process control
+	 * 1.if(条件){
+	 * 		}else if{
+	 * 		}else{
+	 *		}
+	 *
+	 * 2.switch(key){
+	 * 		case value:
+	 * 			break;
+	 * 		case value:
+	 * 			break;
+	 * 		default:
+	 * 			break;
+	 * 	}
+	 * 
+	 * 3.while(条件){
+	 * 	}
+	 * 
+	 * 4.do {}while(条件)
+	 * 
+	 * 5.for(初始值；比较条件；增量改变)
+	 * 
+	 * 6.for(被遍历的数据类型 遍历对象：数组/集合){
+	 * 		遍历对象···
+	 * 	}
+	 * 
+	 * 7. break;结束整个循环操作
+	 *    continue;结束当前循环操作，进入下一次循环
+	 * 	
+	 */
 	
 	
 }
+
+
+
 
 
