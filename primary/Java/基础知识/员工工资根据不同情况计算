@@ -1,6 +1,4 @@
-package com.yc123.demo;
-
-import sun.applet.Main;
+package employee;
 
 /*定义员工类：
 员工基本属性：5个以上
@@ -28,6 +26,10 @@ import sun.applet.Main;
       .......              
 */
 
+	
+
+	
+
 
 public class EmpClass {
 	
@@ -49,9 +51,6 @@ public class EmpClass {
 		System.out.println("总工资为："+totalMoney);
 		
 	}
-	
-
-	
 	
 	//属性
 	private String empName;
@@ -210,5 +209,11 @@ public class EmpClass {
 		//返回
 		return totalMoney+=(abilityMon+apecMon+workMon);
 	}
+	
+	
+	
+	
+	
+	
 	
 }
