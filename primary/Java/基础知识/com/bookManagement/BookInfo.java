@@ -15,7 +15,7 @@ public class BookInfo {
 	private double bookPrice;
 	private int bookPublishDate;
 	
-	//·â×°½Ó¿Ú
+	//å°è£…æ¥å£
 	public int getBookId() {
 		return bookId;
 	}
@@ -46,7 +46,7 @@ public class BookInfo {
 	public void setBookPublishDate(int bookPublishDate) {
 		this.bookPublishDate = bookPublishDate;
 	}
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	public BookInfo() {
 		super();
 	}
@@ -59,84 +59,94 @@ public class BookInfo {
 		this.bookPublishDate = bookPublishDate;
 	}
 	
-	//·½·¨
-	//¼ì²é¼Û¸ñ
+	//æ–¹æ³•
+	//æ£€æŸ¥ä»·æ ¼
 	void checkPrice(double bookPrice){
 		this.bookPrice=bookPrice;
-		if(bookPrice<=0){
-			System.out.println("Í¼ÊéµÄ¼Û¸ñ²»ºÏ·¨£¡");
+		if(bookPrice<=0 && bookPrice>200){
+			System.out.println("å›¾ä¹¦çš„ä»·æ ¼ä¸åˆæ³•ï¼");
 		}
 		
 	}
-	//½éÉÜÍ¼Êé
+	//ä»‹ç»å›¾ä¹¦
 	void introduceBookInfo(int bookId, String bookName, String bookAuther, double bookPrice, int bookPublishDate){
 		this.bookId = bookId;
 		this.bookName = bookName;
 		this.bookAuther = bookAuther;
 		this.bookPrice = bookPrice;
 		this.bookPublishDate = bookPublishDate;
-		System.out.println("Í¼ÊéµÄÃû×Ö£º"+bookName+"Í¼ÊéµÄID£º"+bookId+"Í¼ÊéµÄ×÷Õß£º"+bookAuther+"Í¼ÊéµÄ¼Û¸ñ£º"+bookPrice+"Í¼Êé³ö°æÊ±¼ä£º"+bookPublishDate);				
+		System.out.println("å›¾ä¹¦çš„åå­—ï¼š"+bookName+"å›¾ä¹¦çš„IDï¼š"+bookId+"å›¾ä¹¦çš„ä½œè€…ï¼š"+bookAuther+"å›¾ä¹¦çš„ä»·æ ¼ï¼š"+bookPrice+"å›¾ä¹¦å‡ºç‰ˆæ—¶é—´ï¼š"+bookPublishDate);				
 	}
-	//ÅĞ¶ÏÓÃ»§ÊÇ·ñºÏ·¨
+	//åˆ¤æ–­ç”¨æˆ·æ˜¯å¦åˆæ³•
 	boolean  checkAccount(){
-		Scanner sca =new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÕË»§ºÅÂë£º");
-		int a= sca.nextInt();
-		System.out.println("ÇëÊäÈëÃÜÂë£º");
-		String b=sca.next();
+		Scanner sc =new Scanner(System.in);
+		System.out.println("è¯·è¾“å…¥è´¦æˆ·å·ç ï¼š");
+		int a= sc.nextInt();
+		System.out.println("è¯·è¾“å…¥å¯†ç ï¼š");
+		String b=sc.next();
 		boolean x;
 		if(a==accountNum && b.equals(accountPwd)){
 			
 			x =true;
-		System.out.println("ÕË»§ÑéÖ¤³É¹¦£¡");
+		System.out.println("è´¦æˆ·éªŒè¯æˆåŠŸï¼");
 		}else{
 			x =false;
-			System.out.println("ÕË»§ÑéÖ¤Ê§°Ü");
+			System.out.println("è´¦æˆ·éªŒè¯å¤±è´¥");
 		}
-		sca.close();
+//		sc.close();
 		return x;
 		
 	}
-	//Ìí¼ÓÍ¼Êé
+	//æ·»åŠ å›¾ä¹¦
 	void addBook(){
 		String[][] addBook = new String[10][5];
-//		checkAccount();
+//		addBook[7][5]="ä¸€é£sad";
+		//è°ƒç”¨è´¦æˆ·éªŒè¯
 		boolean x=checkAccount();
 		while (x) {
 			
 			Scanner sca =new Scanner(System.in);
 			
-			System.out.println("ÇëÊäÈëÊéÃû£º");
+			System.out.println("è¯·è¾“å…¥ä¹¦åï¼š");
 			String bookName= sca.next();
-			System.out.println("ÇëÊäÈëID£º");
-			String bookID= sca.next();
-			System.out.println("ÇëÊäÈë×÷Õß£º");
+			System.out.println("è¯·è¾“å…¥IDï¼š");
+			String bookId= sca.next();
+			System.out.println("è¯·è¾“å…¥ä½œè€…ï¼š");
 			String bookAuther= sca.next();
-			System.out.println("ÇëÊäÈë¼Û¸ñ£º");
+			System.out.println("è¯·è¾“å…¥ä»·æ ¼ï¼š");
 			String bookPrice= sca.next();
-			System.out.println("ÇëÊäÈë×÷Õß£º");
+			System.out.println("è¯·è¾“å…¥ä½œè€…ï¼š");
 			String bookPublishDate= sca.next();
 			
-			System.out.println("ÊäÈëÍê³É£¡");
+			System.out.println("è¾“å…¥å®Œæˆï¼");
 			
+			System.out.println("å›¾ä¹¦çš„åå­—ï¼š"+bookName+"å›¾ä¹¦çš„IDï¼š"+bookId+"å›¾ä¹¦çš„ä½œè€…ï¼š"+bookAuther+"å›¾ä¹¦çš„ä»·æ ¼ï¼š"+bookPrice+"å›¾ä¹¦å‡ºç‰ˆæ—¶é—´ï¼š"+bookPublishDate);
 			
-			for(int i=0; i<5;i++){
-				if(addBook[i] != null){					
+			for(int i=0; i<10;i++){
+
+				if(addBook[i][0] != null){	
+
 					i++;
 				}else{
+					
 					addBook[i][0]=bookName;
-					addBook[i][1]=bookID;
+					addBook[i][1]=bookId;
 					addBook[i][2]=bookAuther;
 					addBook[i][3]=bookPrice;
-					addBook[i][4]=bookPublishDate;
+					addBook[i][4]=bookPublishDate;	
 					
-					for(String temp: addBook[i]){
-						System.out.println(temp);
+					System.out.println("å­˜å…¥æˆåŠŸ!");
+					for(int j=0;j<5;j++){
+						
+						System.out.println(addBook[i][j]);
 					}
+					break;
 				}
-				
+				break;
 			}
+			
 			sca.close();
+			x=false;
 		}
 		
 		
