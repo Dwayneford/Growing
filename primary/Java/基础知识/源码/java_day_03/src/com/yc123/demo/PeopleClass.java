@@ -1,0 +1,105 @@
+package com.yc123.demo;
+
+public class PeopleClass {
+	
+	//定义属性
+	//default 
+	private String name;
+	private char gender;
+	private double tall;
+	private String job;
+	
+	//对私有属性 提供 取值 赋值 方法，方法 必须公共的权限；称为：简单封装
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public double getTall() {
+		return tall;
+	}
+
+	public void setTall(double tall) {
+		this.tall = tall;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+	
+	
+	double weight;
+	
+	
+	//非私有属性
+	int age;
+	
+	
+	
+	//定义类 拥有的公共行为
+	public void run(){
+		System.out.println("跑 的行为..");
+	}
+	
+	void walk(){
+		System.out.println("走路 的 方法");
+	}
+	
+	void eat(){
+		System.out.println("吃东西");
+	}
+	
+	void sleep(){
+		System.out.println("正在睡觉,,,");
+	}
+	
+	public String learning(){
+		String retStr ="正在学习z中....";
+		
+		return retStr;
+	}
+	/**
+	 * 默认构造函数
+	 */
+	public PeopleClass() {
+		super();
+	}
+	/**
+	 * 有参数 构造函数，有了有参构造函数，无参构造函数 必须显示的写出，否则被覆盖，无法通过无参函数创建对象
+	 * @param name
+	 * @param gender
+	 * @param tall
+	 * @param job
+	 * @param age
+	 * @param weight
+	 */
+	public PeopleClass(String name, char gender, double tall, String job, int age, double weight) {
+		super();
+		this.name = name;
+		this.gender = gender;
+		this.tall = tall;
+		this.job = job;
+		this.age = age;
+		this.weight = weight;
+	}
+	
+	
+	
+	
+	
+}
