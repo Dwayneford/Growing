@@ -1,0 +1,41 @@
+package CommonClass;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class VerificationCode {
+
+	public static void main(String[] args) {
+
+		String logCode ="";
+		String str = "qwerrtuyuiasdffglzxcvbnm";
+		String strupper=str.toUpperCase();
+		String num="1234567890";
+		String strNum=strupper+str+num;
+		for (int i = 0; i <6; i++) {
+			int [] arr= new int[6];
+			int index = new Random().nextInt(strNum.length());
+			char code = strNum.charAt(index);
+			
+			logCode+=code;
+			
+		}
+		System.out.println("验证码为:"+logCode);
+		System.out.println("请输入验证码:....");
+		Scanner sca = new Scanner(System.in);
+		String input = sca.next();
+		
+		//判断验证码是否匹配
+		if (input.equalsIgnoreCase(logCode)) {  //忽略大小写
+			System.out.println("验证通过！");
+		}else{
+			System.out.println("验证失败！");
+		}
+		
+		
+	}
+
+	
+	
+	
+}
