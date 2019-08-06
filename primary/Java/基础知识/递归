@@ -1,0 +1,19 @@
+public class Factorial {
+
+	 int factorial(int n){
+		 if (n==1 || n==0) {
+			return n;
+			
+		}else {
+			return n*factorial(n-1);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Factorial f= new Factorial();
+		f.factorial(7);
+		System.out.println(f.factorial(5));
+	}
+	 
+}
