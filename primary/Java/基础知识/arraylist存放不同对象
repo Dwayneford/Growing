@@ -1,0 +1,100 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Quchongshuru {
+	
+	public static void main(String[] args) {
+		ArrayList arrli= new ArrayList();
+		arrli.add("a");
+		arrli.add("b");
+		arrli.add("c");
+		arrli.add("d");
+		arrli.add("a");
+		arrli.add(new People("大白", 12345, 5000.0));
+		arrli.add(new People("大白", 12345, 5000.0));
+		arrli.add(new People("小黄", 12346, 7000.0));
+		
+		showArrayList(arrli);
+		
+	}
+	
+	
+	
+
+	static void showArrayList(ArrayList al){
+		//创建新的集合存放数组
+		ArrayList newAl = new ArrayList();
+		Iterator iter = al.iterator();
+		while(iter.hasNext()){
+			Object obj = iter.next();
+			if(! newAl. contains(obj)){
+				newAl.add(obj);
+			}			
+		}
+		
+		Iterator newIete = newAl.iterator();
+		while(newIete.hasNext()){
+			System.out.println(newIete.next());
+		}				
+	}		
+}
+
+class People{
+	String name;
+	int ID;
+	double salary;
+	
+	
+	@Override
+	public String toString() {
+		return "[name=" + name + ", ID=" + ID + ", salary=" + salary + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+
+	public People(String name, int iD, double salary) {
+		super();
+		this.name = name;
+		ID = iD;
+		this.salary = salary;
+		
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		
+		if(!(obj instanceof People)){
+			return false;
+		}
+			People peo= (People) obj;
+		return this.getID()==peo.ID;
+		
+	}
+
+	
+	
+}
