@@ -1,0 +1,43 @@
+package FenZu;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Random;
+/**
+ * 写一个程序，将班上的20个同学随机分为4 个组。采用List集合和随机数。
+ * @author Administrator
+ *
+ */
+
+public class FenZu {
+
+	public static void main(String[] args) {
+		ArrayList lis= new ArrayList();
+		for(int i=1;i<=20;i++){
+			lis.add(i);
+		}
+		Iterator iter= lis.iterator();
+		while(iter.hasNext()){
+			System.out.print(iter.next()+" ");
+		}	
+		System.out.println();
+		System.out.println("##########");
+		
+		Random ran = new Random();
+		Object intI;
+		
+		for(int i=1;i<=4;i++){
+			System.out.printf("第%d组",i);
+			for(int j=0;j<5;j++){
+				intI=lis.get(ran.nextInt(lis.size()));
+				System.out.print(" "+intI);
+				//移除它，防止重复
+				lis.remove(intI);
+			}
+			System.out.println("\n");
+		}
+		
+	}
+	
+}
