@@ -1,0 +1,79 @@
+package Collection;
+
+import java.util.*;
+
+/**
+ *人物和其武器以及攻击力登记系统
+ */
+public class HashMapAndArrayList {
+	public static void main(String[] args) {
+		//用于存储所有角色
+		Map m = new HashMap();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("欢迎使用登记系统！");
+		String flag = "";  //标识是否退出系统
+		String name = "";	//姓名
+		String skill ="";	//能力
+		int aggressivity;	//攻击力
+		int number ;		//功能选择序号
+		
+		while(true){
+			System.out.println("请选择功能！");
+			System.out.println("1、添加角色");
+			System.out.println("2、删除角色");
+			System.out.println("3、查询角色");
+			System.out.println("4、退出系统");
+			number=sc.nextInt();
+			switch (number) {
+			case 1:
+				do {
+					//用于存储一个角色的具体信息
+					
+					List lis =new ArrayList();
+					System.out.println("请输入姓名：");
+					name=sc.next();
+					System.out.println("请输入技能：");
+					skill=sc.next();
+					System.out.println("请输入攻击力：");
+					aggressivity=sc.nextInt();
+					
+					//把信息存入ArrayList中
+					lis.add(name);
+					lis.add(skill);
+					lis.add(aggressivity);
+					m.put(name, lis);
+					
+					System.out.println("是否继续登记(Y/N)？");
+					flag=sc.next().trim();
+										
+				} while ("y".equals(flag) || "Y".equals(flag));
+				break;
+			case 2:
+				System.out.println("请输入要删除的姓名:");
+				name = sc.next();
+				m.remove(name);
+				
+				break;
+			case 3:
+				Set set = m.keySet();  //获得一个key
+				Iterator iter = set.iterator();	//返回一个迭代器对象
+				while(iter.hasNext()){
+					String key=(String) iter.next();	//得到Key键值
+					List l =(List)m.get(key);	//根据key 取值
+					System.out.println("姓名："+l.get(0)+";技能："+l.get(1)+";攻击力"+l.get(2));
+				}
+				  				
+				break;	
+			case 4:
+				System.out.println("感谢您使用本系统！");
+				break;
+			default:
+				System.out.println("请输入正确的数字！");
+				break;
+			}
+			
+		}
+		
+	}
+			
+}
