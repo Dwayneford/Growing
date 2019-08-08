@@ -1,0 +1,26 @@
+package Collection;
+
+import java.util.Arrays;
+
+public class Zifuchuanpaixu {
+
+	public static void main(String[] args) {
+		String str = "zxcvbasdfg";
+		System.out.println("排序前："+str);
+		System.out.println("排序后："+sortStr(str));
+		
+		
+	}
+	
+	private static String sortStr(String string){
+		//将字符串转为字符数组
+		char[] cha = string.toCharArray();
+		//对数组排序
+		Arrays.sort(cha);
+		//将排序后的数组转为字符串
+		String s =new String (cha);
+		//返回处理后的字符串
+		return s ;
+	}
+
+}
