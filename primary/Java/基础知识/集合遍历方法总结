@@ -1,0 +1,88 @@
+package Collection;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+public class BianLiZongJie {
+
+	public static void main(String[] args) {
+		//遍历List方法一：普通for循环
+		List list =new ArrayList();
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		System.out.println("遍历List方法一：普通for循环");
+		for(int i =0;i<list.size();i++){
+			String temp= (String) list.get(i);
+			System.out.println(temp);
+		}
+		
+		//遍历List方法二：增强for循环(使用泛型!)
+		List list1= new LinkedList();
+		list1.add("a");
+		list1.add("b");
+		list1.add("c");
+				
+//		for (String temp: list1){
+//			System.out.println(temp);
+//			}
+		
+		
+		//遍历List方法三：使用Iterator迭代器(1)
+		System.out.println("遍历List方法三：使用Iterator迭代器(1)");
+		for (Iterator iter1 = list1.iterator(); iter1.hasNext();) {
+			Object object1 = (Object) iter1.next();
+			System.out.println(object1);
+		}
+		
+		//遍历List方法四：使用Iterator迭代器(2)		
+		System.out.println("遍历List方法四：使用Iterator迭代器(2)");
+		Iterator iter2 = list.iterator();
+		while (iter2.hasNext()) {
+			Object object2 = (Object) iter2.next();
+		//	iter.remove();//如果要遍历时，删除集合中的元素，建议使用这种方式！
+			System.out.println(object2);
+		}
+		
+		Set set = new HashSet();
+		set.add("a");
+		set.add("b");
+		set.add("c");
+		//遍历Set方法一：增强for循环
+		System.out.println("遍历Set方法一：增强for循环");
+		for (Object object3 : set) {
+			System.out.println(object3);
+		}
+		
+		//遍历Set方法二：使用Iterator迭代器
+		System.out.println("遍历Set方法二：使用Iterator迭代器");
+		for (Iterator iter3 = set.iterator(); iter3.hasNext();) {
+			Object object3 = (Object) iter3.next();
+			System.out.println(object3);
+		}
+		
+		//遍历Map方法一：根据key获取value
+		System.out.println("遍历Map方法一：根据key获取value");
+		Map maps = new HashMap();
+		maps.put(1, "1号");
+		maps.put(2, "2号");
+		maps.put(3, "3号");
+		Set ks = maps.keySet();
+		for (Object object : ks) {
+			System.out.println(maps.get(object));
+		}
+		
+		//遍历Map方法二：使用entrySet
+		System.out.println("遍历Map方法二：使用entrySet");
+		Set ss= maps.entrySet();
+		for (Iterator iter5 = ss.iterator(); iter5.hasNext();) {
+			Entry object5 = (Entry) iter5.next();
+			System.out.println(object5.getKey()+","+object5.getValue());
+		}
+		
+		
+	}
+	
+	
+	
+}
