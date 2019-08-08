@@ -1,0 +1,70 @@
+package Collection;
+
+import java.util.TreeSet;
+
+import javax.management.RuntimeErrorException;
+
+public class TreeSetDemo {
+	public static void main(String[] args) {
+		TreeSet ts =new TreeSet();
+		ts.add(new Student(23, "小洪"));		
+		ts.add(new Student(23, "小洪"));
+		ts.add(new Student(23, "测试"));
+		ts.add(new Student(27, "小洪"));
+		
+		System.out.println(ts.toString());
+		
+	}
+}
+
+
+class Student implements Comparable{
+	private int age;
+	private String name;
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Student(int age, String name) {
+		super();
+		this.age = age;
+		this.name = name;
+	}
+	public Student() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return "[age=" + age + ", name=" + name + "]";
+	}
+	@Override
+	public int compareTo(Object o) {
+		//1,0,-1
+		//类型判断
+		if(!(o instanceof Student)){
+			throw new RuntimeException("对象类型不匹配！");
+		}
+		//强制转换操作
+		Student stu = (Student) o;
+		if (this.getAge()>stu.getAge()) {
+			return 1;
+		}
+		if (this.getName()==stu.getName()) {
+			int coNum= this.getName().compareTo(stu.getName());
+			return coNum;
+		}
+		return -1;
+		
+		
+	}
+	
+}
