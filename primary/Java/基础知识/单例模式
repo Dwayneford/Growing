@@ -1,0 +1,57 @@
+public class Dannimoshi {
+
+}
+
+//私有内部类
+class SingleTon3 {
+	private SingleTon3(){		
+	}
+	//定义一个私有内部类
+	private static class Inner{
+		//创建外部类对象的方法
+		private static SingleTon3 intace = new SingleTon3();		
+	}	
+	//写一个方法提供内部类的属性值
+	public static SingleTon3 getInstance(){
+		SingleTon3 singEomEnt = Inner.intace;
+		return singEomEnt;		
+	}
+	
+}
+
+
+//线程安全模式
+class SingleTon2{
+	private static SingleTon2 instance;
+	//构造私有化函数
+	private SingleTon2(){
+		
+	}
+	//写一个方法，提供当前类对象：synchronized程序锁
+	public static synchronized SingleTon2 getInstance(){
+		//判断当前对象是否有效
+		if (instance==null) {
+			instance = new SingleTon2();
+		}
+		return instance;		
+	}		
+}
+
+
+
+//单例模式的实现方式：饿汉模式。
+//提前进行实例化操作，没有加载延迟，不管是否会用到都会初始化一个到内存中去
+class SingleTon{
+	//构造私有化函数
+	private SingleTon(){		
+	} 
+	//创建对象：不能被外部直接创建（调用？）的方法
+	private static SingleTon getSingle(){
+		return new SingleTon();		
+	}
+	//提供一个公共的方法，返回该队形
+	public static SingleTon showSing(){
+		return getSingle();
+	}
+	
+}
