@@ -23,19 +23,16 @@ public class GenericsDemo {
 		void showT(T t);
 		<U> void sayT();
 	}
-	
+	//实现一个内部类接口
 	class MyInterTest<T> implements MyInterface<T>{
-
+		//继承两个方法
 		@Override
 		public void showT(T t) {
-			System.out.println("继承showT方法："+t);
-			
+			System.out.println("继承内部类接口showT方法："+t);		
 		}
-
 		@Override
 		public  void sayT() {
-			System.out.println("继承sayT");
-			
+			System.out.println("继承内部类接口sayT");			
 		}
 
 		//自定义内部类方法
@@ -56,16 +53,46 @@ public class GenericsDemo {
 		GenericsDemo gd= new GenericsDemo();
 		gd.diaoyong();
 		
+		testGen<stut> gdt = new testGen<stut>();
+		gdt.sayOutClass("sadasgasg");
+		gdt.sayOutClass(new stut("小王"));
 	}
 	
 }
 
-//外部类
+//外部类，泛型类
 class testGen<T>{
+	public void showOutClass(T t){
+		System.out.println("外部类泛型方法"+t);
+	}
+	<S> void sayOutClass(S s){
+		System.out.println(s);
+	}
 	
 }
 
+class stut{
+	private String name;
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public stut(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "stut [name=" + name + "]";
+	}
+	
+}
 
 
 
