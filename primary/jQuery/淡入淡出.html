@@ -21,6 +21,7 @@
 		<button id="bdiv1to">fadeTo("slow",0.1)</button>
 		<button id="bdiv2to">fadeTo("slow",0.5)</button>
 		<button id="bdiv3to">fadeTo("slow",0.75)</button>
+		<button id="bdiv4to">透明恢复</button>
 		<br />
 		<div id="div1" style="width: 160px; height:80px ; display:none;background-color: cadetblue;">	</div><br>
 		<div id="div2" style="width: 160px; height:80px ; display:none;background-color: aquamarine;">	</div><br>
@@ -102,7 +103,15 @@
 	
 	$(document).ready(function(){
 		$("#bdiv3to").click(function(){
-			$('#div3').fadeTo("slow",0.75);
+			$('#div3').fadeTo("slow",0.7);
+		})
+	})
+	//透明恢复
+	$(document).ready(function(){
+		$("#bdiv4to").click(function(){
+			$('#div1').fadeTo("fast",1);
+			$('#div2').fadeTo("fast",1);
+			$('#div3').fadeTo("fast",1);
 		})
 	})
 	
