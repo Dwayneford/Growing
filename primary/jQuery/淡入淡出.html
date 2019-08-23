@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>下面演示fadeIn（）使用了不同参数的效果</p>
+		<button id="bdiv1">fadeIn()</button>
+		<button id="bdiv2">fadeIn("slow")</button>
+		<button id="bdiv3">fadeIn(5000)</button>
+		<br />
+		<div id="div1" style="width: 160px; height:80px ; display:none;background-color: cadetblue;">	</div><br>
+		<div id="div2" style="width: 160px; height:80px ; display:none;background-color: aquamarine;">	</div><br>
+		<div id="div3" style="width: 160px; height:80px ; display:none;background-color: cornflowerblue;">	</div><br>
+	</body>
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script >
+	$(document).ready(function(){
+		$("#bdiv1").click(function(){
+			$("#div1").fadeIn();
+		})
+	})
+	
+	$(document).ready(function(){
+		$("#bdiv2").click(function(){
+			$("#div2").fadeIn("slow");
+		})
+	})
+	
+	$(document).ready(function(){
+		$("#bdiv3").click(function(){
+			$('#div3').fadeIn(5000);
+		})
+	})
+	
+	
+	
+	
+	
+	
+</script>
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js">
+		
+	</script>
+<script >
+	$(document).ready(function(){
+		$("#showandhide").click(function(){
+			//使用 toggle() 方法来切换 hide() 和 show() 方法。
+			//$(selector).toggle(speed,callback);
+			$("p").toggle();
+		})
+	})
+	
+	$(document).ready(function(){
+		$("#disappear").click(function(){
+			//逐渐消失
+			$("p").hide(3000);
+		})
+	})
+	$(document).ready(function(){
+		$("#showslow").click(function(){
+			//逐渐显示
+			$("p").show(3000);
+		})
+	})
+	
+</script>
+
+	<body>
+		<button id="disappear">逐渐消失</button>
+		<button id="showslow">逐渐显示</button>
+		<button	id="showandhide">隐藏/显示</button>
+		<p>这是一个文本段落</p>
+	</body>
+</html>
+
+
+	
