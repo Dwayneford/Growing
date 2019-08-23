@@ -18,6 +18,10 @@
 		<button id="bdiv2o">fadeOut("slow")</button>
 		<button id="bdiv3o">fadeOut(5000)</button>
 		<br />
+		<button id="bdiv1to">fadeTo("slow",0.1)</button>
+		<button id="bdiv2to">fadeTo("slow",0.5)</button>
+		<button id="bdiv3to">fadeTo("slow",0.75)</button>
+		<br />
 		<div id="div1" style="width: 160px; height:80px ; display:none;background-color: cadetblue;">	</div><br>
 		<div id="div2" style="width: 160px; height:80px ; display:none;background-color: aquamarine;">	</div><br>
 		<div id="div3" style="width: 160px; height:80px ; display:none;background-color: cornflowerblue;">	</div><br>
@@ -83,6 +87,24 @@
 		})
 	})
 	
+	//透明
+		$(document).ready(function(){
+		$("#bdiv1to").click(function(){
+			$("#div1").fadeTo('slow',0.1);
+		})
+	})
+	
+	$(document).ready(function(){
+		$("#bdiv2to").click(function(){
+			$("#div2").fadeTo("slow",0.5);
+		})
+	})
+	
+	$(document).ready(function(){
+		$("#bdiv3to").click(function(){
+			$('#div3').fadeTo("slow",0.75);
+		})
+	})
 	
 </script>
 
