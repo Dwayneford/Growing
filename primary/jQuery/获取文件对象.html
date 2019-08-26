@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="div_id">
+			div块
+			<div id="div_id_inner">
+				内部div块
+			</div>
+		</div>
+		<input type="button" name="" id="btu" value="点击切换颜色" />
+		<div id="selOld">  
+		    <label id="1" class="dd" style="background-color:white">darkorchid</label>  
+		    <label id="2" class="dd" style="background-color:white">brown</label>  
+		    <label id="3" class="dd" style="background-color:white">greenyellow</label>  
+		    <label id="4" class="dd" style="background-color:white">blue</label>  
+		    <label id="5" class="dd" style="background-color:white">white</label>  
+		</div>
+	</body>
+	
+	<style type="text/css">
+		#div_id{
+			width: 200px ;height: 200px;background-color: silver;text-align: end
+		}
+		#div_id_inner{
+			width: 100px ;height: 100px;background-color: silver; text-align: end;
+		}
+		.dd{float:left; padding:5px 10px; text-align:center; border:1px solid #eee; margin:10px; float:left; font-size:12px; cursor:pointer } 
+	</style>
+</html>
+
+<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+
+<script >
+	$(document).ready(function(){
+		$('#btu').click(function(){
+			$('#div_id').css('background-color','cadetblue');
+			$('#div_id_inner').css('background-color','aquamarine');
+		})
+	})
+	$(document).ready(function(){
+		$('#1').click(function(){
+			$('#div_id').css('background-color','darkorchid');
+			
+		})
+	})
+	$(document).ready(function(){
+		$('#2').click(function(){
+			$('#div_id').css('background-color','brown');
+			
+		})
+	})
+	$(document).ready(function(){
+		$('#3').click(function(){
+			$('#div_id').css('background-color','greenyellow');
+			
+		})
+	})
+	$(document).ready(function(){
+		$('#4').click(function(){
+			$('#div_id').css('background-color','blue');
+			
+		})
+	})
+	$(document).ready(function(){
+		$('#5').click(function(){
+			$('#div_id').css('background-color','white');
+			
+		})
+	})
+</script>
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div_id" style="width: 600px; height: 400px ; background-color: #5F9EA0;" >
+			内容如下：
+		</div>
+		<button id="but_id">点击传入</button>
+		<input type="text" name="" id="input_id" value="请在此输入内容" />
+	</body>
+</html>
+<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#but_id').click(function(){
+			$('#div_id').append('<br/>');
+			$('#div_id').append($('#input_id').val());
+		});
+	});
+</script>
+
+
+
+
+
+
+
+
