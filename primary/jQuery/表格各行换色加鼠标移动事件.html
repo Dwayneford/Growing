@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<table  width="300" border="1" >
+		<thead>
+			<td>编号</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</thead>
+		<tbody id="tb_id">
+			<tr id="tr_id1">
+				<td>1</td>
+				<td>张三</td>
+				<td>21</td>
+			</tr>
+			<tr id="tr_id2">
+				<td>2</td>
+				<td>李四</td>
+				<td>23</td>
+			</tr>
+			<tr id="tr_id1">
+				<td>3</td>
+				<td>王五</td>
+				<td>25</td>
+			</tr>
+			<tr id="tr_id2">
+				<td>4</td>
+				<td>赵六</td>
+				<td>33</td>
+			</tr>
+			<tr id="tr_id1">
+				<td>5</td>
+				<td>老七</td>
+				<td>29</td>
+			</tr>
+			<tr id="tr_id3" style="background-color: olive;">
+				<td>6</td>
+				<td>八哥</td>
+				<td>39</td>
+			</tr>
+			</tbody>
+		</table>
+
+</html>
+<style type="text/css">
+	#tr_id1{
+		background-color: coral;
+	}
+	#tr_id2{
+		background-color: #5F9EA0;
+	}
+	.mouse_color{
+		background-color: aquamarine;
+	}
+</style>
+<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	$(function () {
+	    var tr = $("#tb_id tr");
+	    tr.mouseover(function () {
+	    	$(this).find("td").addClass("mouse_color"); 
+//	        $(this).css("background-color", "#AEF2E5");
+//	        $(this).children("td").css("background-color", "#AEF2E5");
+	    }).mouseout(function () {
+	    	
+	    	 $(this).find("td").removeClass("mouse_color"); 
+//	        $(this).css("background-color", "#FFFFFF");
+//	        $(this).children("td").css("background-color", "#FFFFFF");
+	    });
+	});
+
+</script>
+
+
+
