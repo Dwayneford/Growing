@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="SubCategoryBox">
+            <ul>
+                <li ><a href="#">佳能</a><i>(30440) </i></li>
+                <li ><a href="#">索尼</a><i>(27220) </i></li>
+                <li ><a href="#">三星</a><i>(20808) </i></li>
+                <li ><a href="#">尼康</a><i>(17821) </i></li>
+                <li ><a href="#">松下</a><i>(12289) </i></li>
+                <li ><a href="#">卡西欧</a><i>(8242) </i></li>
+                <li ><a href="#">富士</a><i>(14894) </i></li>
+                <li ><a href="#">柯达</a><i>(9520) </i></li>
+                <li ><a href="#">宾得</a><i>(2195) </i></li>
+                <li ><a href="#">理光</a><i>(4114) </i></li>
+                <li ><a href="#">奥林巴斯</a><i>(12205) </i></li>
+                <li ><a href="#">明基</a><i>(1466) </i></li>
+                <li ><a href="#">爱国者</a><i>(3091) </i></li>
+                <li ><a href="#">其它品牌</a><i>(7275) </i></li>
+            </ul>
+            <div class="showmore">
+                <a href=""><span>显示全部品牌</span></a>
+            </div>
+        </div>
+	</body>
+</html>
+<style type="text/css">
+	
+ul,li{
+	/* 清除ul，li的小圆点 */
+	list-style:none;
+}
+ 
+a{
+	/* 取消所有的下划线 */
+	text-decoration:none;
+	padding-left:20px;
+	display:block;
+	display:inline-block;
+	width:100px;
+	padding-top:3px;
+	padding-bottom:3px;	
+}
+body{
+	font-size:16px;
+	text-align:center;
+}
+*{
+	margin:0;
+	padding:0;
+}
+.SubCategoryBox{
+	width:600px;
+	margin:0 auto;
+	text-align:center;
+	margin-top:40px;	
+}
+.SubCategoryBox ul li{
+	display:block;
+	float:left;
+	width:200px;
+	line-height:20px;	
+}
+.showmore{
+	clear:both;
+	text-align:center;
+	padding-top:10px;
+}
+.showmore a{
+	display:block;
+	width:120px;
+	margin:0 auto;
+	line-height:24px;
+	border:1px solid #AAA;
+}
+.showmore a span{
+	padding-left:15px;
+	background:url(img/down.gif) no-repeat 0 5px;
+}
+.promoted a{
+	color:#F50;
+}
+</style>
+<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+	var $category =$('ul li:gt(5):not(:last)');//获取索引值大于5的品牌集合对象（去掉最后一个）
+	$category.hide();	//隐藏获得的JQuery对象
+	var $toggleBtn = $('div.showmore >a');	//获取全部品牌的按钮
+	$toggleBtn.click(function(){
+		if($category.is(":visible")){	//如果元素显示，则执行对应的代码
+			$category.hide();	//隐藏$category
+			$('.showmore a span')
+				.css("background","url(img/down.gif) no-repeat 0 5px")
+				.text("更多");	//改变背景图片和文字
+			$('ul li').removeClass("promoted");	//去掉高亮样式
+		}else{
+			$category.show();
+			$('.showmore a span')
+				.css("background","url(img/up.gif) no-repeat 0 5px")
+				.text("精简");			//改变背景图片和文本内容
+			$('ul li').filter(":contains('华为'),:contains('苹果'),:contains('魅族')")
+				.addClass("promoted");	//添加高亮样式
+		}
+		
+		return false;	//超链接不可跳转
+	})
+})
+</script>
+
+
+
+
+

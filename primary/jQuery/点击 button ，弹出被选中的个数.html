@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" name="test" />
+        <input type="checkbox" name="test" />
+        <input type="checkbox" name="test" />
+        <input type="checkbox" name="test" />
+        <input type="checkbox" name="test" />
+        <input type="checkbox" name="test" />
+        <button>您选中的个数</button>
+	</body>
+</html>
+<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+                $("button").click(function(){
+                    alert('您选中的个数为:'+$(":checkbox:checked").length);
+                });
+            });
+	
+	
+</script>
+
