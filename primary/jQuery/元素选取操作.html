@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="1">选取第一个div元素</button><br />
+		<button  id="2">选取最后一个div元素</button><br />
+		<button  id="3">选取class不为one的所有div元素</button><br />
+		<button  id="4">选取索引值不为偶数的div元素</button><br />
+		<button  id="5">选取索引值不为奇数div元素</button><br />
+		<button  id="6">选取索引值为3的div元素</button><br />
+		<button  id="7">选取索引值大于三div元素</button><br />
+		<button  id="8">选取索引值小于三div元素</button><br />
+		<button  id="9">选取选取所有的标题元素</button><br />
+		<button  id="10">选取选取正在执行动画的元素</button><br />
+		<button  id="11">包含input的type为hidden的元素</button><br />
+		<br />
+		<div id="one" class="one" style="" >
+			id为one，class为one的div
+			<div id="" class="mini" >
+				class为mini
+			</div>
+		</div>
+		
+		<div id="one" class="one" style="" >
+			id为one，class为one的div
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="mini" >
+				class为mini
+			</div>
+		</div>
+		
+		<div id="one" class="one" style="" >
+			id为one，class为one的div
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="" style="width: 50px; height: 50px; background-color: #5F9EA0">
+				
+			</div>
+		</div>
+		
+		<div id="one" class="one" style="" >
+			id为one，class为one的div
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="mini" >
+				class为mini
+			</div>
+			<div id="" class="mini" >
+				class为mini
+			</div>
+		</div>
+		
+		<div id="" style="width: 100px; height: 100px; background-color: #C0C0C0;">
+			包含input的type为hidden的div
+			<input type="hidden" name="" id="" value="" />
+		</div>
+		
+		<div id="" style="width: 100px; height: 100px; background-color: #C0C0C0;">
+			span元素div
+			<br />
+			<span>span</span>
+		</div>
+		
+		<div id="" style="width: 100px; height: 100px; background-color: #C0C0C0;">
+			标题元素div
+			<h1>标题</h1>
+		</div>
+		
+	</body>
+</html>
+<style type="text/css">
+	div{
+		float:left;Margin:10px
+		}
+	
+	.one{
+		width: 200px; height: 200px; background-color: #C0C0C0;
+	}
+	.mini{
+		width: 50px; height: 50px; background-color: #5F9EA0;
+	}
+</style>
+<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+	//选取第一个div元素
+	$(function(){
+		$('#1').click(function(){
+			$('div:first').fadeTo("fast",0.5);
+			$('div:first').fadeTo("fast",1);
+		})
+	})
+	
+	//选取最后一个div元素
+	$(function(){
+		$('#2').click(function(){
+			$('div:last').fadeTo("fast",0.5);
+			$('div:last').fadeTo("fast",1);
+		})
+	})
+	//选取class不为one的所有div元素
+	$(function(){
+		$('#3').click(function(){
+			$("div:not(.one)").fadeTo("fast",0.5);
+			$("div:not(.one)").fadeTo("fast",1);
+		})
+	})
+	//选取索引值不为偶数的div元素
+	$(function(){
+		$('#4').click(function(){
+			$('div:odd').fadeTo("fast",0.5);
+			$('div:odd').fadeTo("fast",1);
+		})
+	})
+	//选取索引值不为奇数的div元素
+	$(function(){
+		$('#5').click(function(){
+			$('div:even').fadeTo("fast",0.5);
+			$('div:even').fadeTo("fast",1);
+		})
+	})
+	//选取索引值为3的div元素
+	$(function(){
+		$('#6').click(function(){
+			$('div:eq(3)').fadeTo("fast",0.5);
+			$('div:eq(3)').fadeTo("fast",1);
+		})
+	})
+	//选取索引值大于3的div元素
+	$(function(){
+		$('#7').click(function(){
+			$('div:gt(3)').fadeTo("fast",0.5);
+			$('div:gt(3)').fadeTo("fast",1);
+		})
+	})
+	//选取索引值大于3的div元素
+	$(function(){
+		$('#8').click(function(){
+			$('div:lt(3)').fadeTo("fast",0.5);
+			$('div:lt(3)').fadeTo("fast",1);
+		})
+	})
+	//选取选取所有的标题元素
+	$(function(){
+		$('#9').click(function(){
+			$(':header').fadeTo(2000,0.1);
+			$(':header').fadeTo(5000,1);
+		})
+	})
+	//选取选取正在执行动画的元素
+	$(function(){
+		$('#10').click(function(){
+			var ani =$(':animated')
+			ani.stop();
+			ani.fadeTo("fast",1);
+			ani.fadeTo("fast",0.5);
+			ani.fadeTo("fast",1);
+		})
+	})
+	//包含input的type为hidden的元素
+	$(function(){
+		$('#11').click(function(){
+			$(':hidden').attr('type','visible')
+
+		})
+	})
+	
+</script>
+

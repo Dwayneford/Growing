@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div  class="reMessage">
+		    <span>筛选事件，输入姓名: </span>
+		    <div class="content">
+		        <input type="text" name="name" id="name">
+		        <div id="showT" class="showT">
+			
+				</div>
+		        <br />
+		        <table>
+		        	<thead>
+					<td>姓名</td>
+					<td>身高</td>
+					<td>体重</td>
+				</thead>
+					<tr>
+		            	<td>张三</td>
+		            	<td>170</td>
+		            	<td>120</td>
+		            </tr>
+					<tr>
+		            	<td>张飞</td>
+		            	<td>170</td>
+		            	<td>120</td>
+		            </tr>
+		            <tr>
+		            	<td>张三丰</td>
+		            	<td>170</td>
+		            	<td>120</td>
+		            </tr>
+		            <tr>
+		            	<td>张无忌</td>
+		            	<td>185</td>
+		            	<td>160</td>
+		            </tr>
+		        </table>
+		    </div>   
+		</div>
+	</body>
+</html>
+<style type="text/css">
+	*{margin:0;padding:0}
+ul li{  
+	list-style-type:none;
+}
+.showT{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	width: 21%;
+}
+#name{
+	width: 20%;
+	height: 30px;
+	text-indent:10px;
+}
+.reMessage{
+	margin-left: 10%;
+	margin-top: 40px;
+}
+ul{
+	text-indent:10px;
+}
+li:hover{
+	background-color: #f0f0f0;
+}
+.showT{
+	display: none;
+}
+</style>
+
+
+<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+$("#name").keyup(function(){
+	var text = $('#name').val();
+	if(text=='张'){
+		$('#showT').show();
+		$('#showT').html("<ul><li οnclick=\"sure('张三')\">张三</li><li>张飞</li><li>张三丰</li><li>张无忌</li></ul>");
+	}else if(text=='张三'){
+		$('#showT').show();
+		$('#showT').html("<ul><li οnclick=\"sure('张三')\">张三</li><li>张三丰</li></ul>");
+	}else if(text=='张无'){
+		$('#showT').show();
+		$('#showT').html("<ul><li οnclick=\"sure('张无')\">张无忌</li></ul>");
+	}else{
+		$('#showT').hide();
+		$('#showT').html("");
+	}
+});
+function sure(value){
+	$('#showT').hide();
+	$('#name').val(value);
+}
+
+</script>
+
+
+
+
+

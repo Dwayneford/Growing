@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div  class="box">			
+			<div class="btn">第一章</div>
+			<div class="content">
+				<ul id="id_1" class="ul">
+				<li>Coffee</li>
+				<li>Milk</li>
+			</ul>
+			</div>
+			
+		</div>
+		<div  class="box">			
+			<div class="btn">第二章</div>
+			<div class="content">
+				<ul id="id_2" class="ul">
+				<li>bread</li>
+				<li>Hotdog</li>
+			</ul>
+			</div>
+			
+		</div>
+		<div  class="box">			
+			<div class="btn">第三章</div>
+			<div class="content">
+				<ul id="id_3" class="ul">
+				<li>fruit</li>
+				<li>onion</li>
+			</ul>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
+
+<style type="text/css">
+	li{
+		list-style:none; font-size: 18px;
+	}
+/*
+	ul{
+		display: none;
+	}*/
+	
+	
+</style>
+
+
+<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.btn').click(function(){			
+			var me = $(this)
+			 me.next(".content").toggle();
+			 me.closest(".box").siblings(".box").find(".content:visible").hide();
+		})
+	})
+</script>
+
+
+
