@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stuList>
+	<student email="123588@qq.com">
+		<id>1001</id>
+		<name>江小白</name>
+		<stuSex>男</stuSex>
+		<stuAddress>重庆</stuAddress>
+	</student>
+	<student email="1235878@qq.com">
+		<id>1002</id>
+		<name>刘若英</name>
+		<stuSex>女</stuSex>
+		<stuAddress>台湾</stuAddress>
+	</student>
+	<student email="123222@qq.com">
+		<id>1003</id>
+		<name>刘德华</name>
+		<stuSex>男</stuSex>
+		<stuAddress>HK</stuAddress>
+	</student>
+</stuList>
