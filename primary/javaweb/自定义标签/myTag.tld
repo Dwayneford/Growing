@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+                        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+ <tlib-version>1.0</tlib-version>
+ <jsp-version>1.2</jsp-version>
+ <short-name>mtg</short-name>
+ <uri>www.myTag</uri>
+	 <!--  输出 自定义标签 -->
+	 <tag>
+	 	<!-- 定义标签名称 -->
+	 	<name>hello</name>
+	 	<!-- 标签对应的执行类 -->
+	 	<tag-class>com.jjfk.tagsupport.SayHelloTat</tag-class>
+	 	<!-- 是否有标签体 -->
+	 	<body-content>empty</body-content>
+	 </tag>
+
+	<!-- 时间格式化 -->
+	<tag>
+		<name>showTime</name>
+		<tag-class>com.jjfk.tagsupport.FormatTimeTag</tag-class>
+		<body-content>empty</body-content>
+		
+		<!-- 属性 -->
+		<attribute>
+			<name>format</name>
+			<!-- true:  表示该属性 必填  false:非必填 -->
+			<required>true</required>
+			<!--  属性 是否支持el表达式  或者 jsp -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+	</tag>
+	
+	<tag>
+		<name>iteator</name>
+		<tag-class>com.jjfk.tagsupport.TagFor</tag-class>
+		
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>scope</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>items</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+ 
+</taglib>
