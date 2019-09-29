@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<filter>
+	  <filter-name>LogFilter</filter-name>
+	  <filter-class>filter.LogFileter</filter-class>
+	</filter>
+	<filter-mapping>
+	  <filter-name>LogFilter</filter-name>
+
+	  <url-pattern>/welcome.jsp</url-pattern>
+	</filter-mapping>
+
+	<session-config>  
+	    <session-timeout>1</session-timeout>  
+	</session-config>  
+	
+	<listener>   
+	     <listener-class>com.listener.SessionCounter</listener-class>   
+	</listener>  
+
+  <servlet>
+    <servlet-name>DisplayHeader</servlet-name>
+    <servlet-class>filter.DisplayHeader</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>filter.servlet.LoginServlet</servlet-class>
+  </servlet>
+ <servlet>  
+     <!-- 类名 -->  
+    <servlet-name>WebsitesServlet</servlet-name>  
+    <!-- 所在的包加类名 -->  
+    <servlet-class>com.servlet.WebsitesServlet</servlet-class>  
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeImg</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.servlet.ChangeImg</servlet-class>
+  </servlet>
+
+- <servlet>
+  <servlet-name>BaseServlet</servlet-name> 
+  <servlet-class>com.servlet.BaseServlet</servlet-class> 
+  </servlet>
+  <servlet>
+    <servlet-name>DoUploadServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.servlet.DoUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoDownloadServlet</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>com.servlet.DoDownloadServlet</servlet-class>
+  </servlet>
+
+
+
+
+- <servlet-mapping>
+  <servlet-name>BaseServlet</servlet-name> 
+  <url-pattern>/servlet/BaseServlet</url-pattern> 
+  </servlet-mapping>
+ <servlet-mapping>  
+    <servlet-name>WebsitesServlet</servlet-name>  
+    <!-- 对外映射的网址 -->  
+    <url-pattern>/websitesServletUrl</url-pattern>  
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DisplayHeader</servlet-name>
+    <url-pattern>/servlet/DisplayHeader</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServletURL</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeImg</servlet-name>
+    <url-pattern>/servlet/ChangeImg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoUploadServlet</servlet-name>
+    <url-pattern>/servlet/DoUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoDownloadServlet</servlet-name>
+    <url-pattern>/servlet/DoDownloadServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
